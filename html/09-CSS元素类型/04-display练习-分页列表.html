@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* 我的代码 */
+        /* a {
+            text-decoration: none;
+            color: #0000cc;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+
+            list-style: none;
+            margin: 0;
+            padding: 10px 20px;
+            display: inline-block;
+            border: 1px solid rgb(20, 7, 190);
+        }
+
+        a:active {
+            border: none;
+        } */
+        /* a:active+li{
+            border: 1px solid rgb(20, 7, 190);
+        } */
+
+
+        a {
+            text-decoration: none;
+            color: #0000cc;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 整体 */
+
+        /* 局部 */
+        li {
+            display: inline-block;
+        }
+        .page ul li a{
+            display: inline-block;
+            border: 1px solid #e1e2e3;
+            width: 34px;
+            height: 34px;
+
+            font-size: 14px;
+
+            /* 调整间距 */
+
+            margin-right: 5px;
+            /* 居中 */
+            text-align: center;
+            /* line-height: 34px; */
+        }
+        .page ul li a:hover{
+
+            border: 1px solid #38f;
+            background-color: #f2f8ff;
+        }
+        /* 这里设置宽度必须加.page，不然会被层叠掉 */
+        .page .pre a, .page .next a {
+            width: 188px;
+        }
+
+        /* 点击后的a效果 */
+        .page .active {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            border: none;
+            font-weight: 700;
+            color: black;
+
+            /* 不好，依然可以点击 */
+            cursor: initial;
+        }
+        .page .active:hover {
+            border: none;
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- div>ul>(li>a[href=#]{$})*10 -->
+    <div class="page">
+        <ul>
+            <li class="pre"><a href="#1">&lt;上一页</a></li>
+            <li><a href="#2">1</a></li>
+            <li><a href="#3">2</a></li>
+            <!-- 用js删掉href -->
+            <li><a class="active" href="#4">3</a></li>
+            <li><a href="#5">4</a></li>
+            <li><a href="#6">5</a></li>
+            <li><a href="#7">6</a></li>
+            <li><a href="#8">7</a></li>
+            <li><a href="#9">8</a></li>
+            <li><a href="#10">9</a></li>
+            <li><a href="#11">10</a></li>
+            <li class=next><a href="#12">下一页&gt;</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

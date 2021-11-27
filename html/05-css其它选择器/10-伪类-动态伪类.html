@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            a:link 未访问的链接
+            a:visit 访问的链接
+            a:hover 光标挪动到链接上
+            a:active 激活的链接(鼠标在链接上长按住未松开)
+            a:hover必须放在:link和:visit后面才完全生效
+            a:active必须放在a:hover后面才完全生效
+            所以建议的顺序如下
+            记忆:女朋友看到LV后,ha ha大笑
+        } */
+        a:link {
+            color: red;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: blue;
+        }
+        a:active {
+            color: orange;
+        }
+
+        /* 注意:下面这个样式相当于把link visited focus hover active都设置成了红色 */
+        /* a {
+            color: red;
+        } */
+
+        /* hover和active用在其它元素 */
+        strong:hover {
+            color: orange;
+        }
+        strong:active {
+            font-size: 40px;
+        }
+
+        /* focus:指当前拥有输入焦点的元素,文本框一聚焦,背景就变色 */
+        input:focus {
+            background-color: blue;
+        }
+        /* 同样a元素也可以使用 */
+        /* 但是经常来说,不希望a元素被选中 */
+        a:focus {
+            background-color: yellow;
+        }
+        /* 顺序link visited focus hover active */
+        /* 记忆:女朋友看到LV后,(feng)风一样的ha ha大笑 */
+        
+        /* 去掉a元素的聚焦状态 */
+        /* 第一种 */
+        a:focus{
+            outline: none;
+        }
+        /* 第二种tabindex,看下面 */
+    </style>
+</head>
+<body>
+    <a href="#">Google一下</a>
+    <a href="#123" tabindex="-1">百度一下</a>
+    <strong>我是strong元素</strong>
+
+    <input type="text">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box1 {
+            background-color: rgb(78, 78, 32);
+            width: 100px;
+            height: 100px;
+        }
+        .box2 {
+            background-color: rgb(25, 33, 104);
+            width: 200px;
+            height: 200px;
+        }
+        .inner {
+            background-color: purple;
+            width: 100px;
+            height: 100px;
+            /* 左右不会传递 */
+            margin-left: 20px;
+            /* 上下会传递 */
+            margin-top: 20px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2">
+        <div class="inner"></div>
+    </div>
+
+
+</body>
+</html>

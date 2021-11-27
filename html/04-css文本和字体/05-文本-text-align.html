@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            background-color: royalblue;
+            text-align: center;
+        }
+        .box2 {
+            background-color: red;
+            text-align: right;
+        }
+        .box3 {
+            background-color: yellow;
+            text-align: center;
+        }
+        .inner {
+            background-color: green;
+            width: 200px;
+            /* 解决inner div无法居中 */
+            display: inline-block;
+        }
+        /* justify:两端对齐(对最后一行没有效果) */
+        .box4 {
+            background-color: black;
+            color: white;
+            text-align: justify;
+            /* text-align-last: justify;对最后一行有效 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        哈哈哈哈
+    </div>
+    <div class="box2">
+        <img src="../exercise3/img/2.png" alt="">
+    </div>
+    <div class="box3">
+        <!-- 块级元素 -->
+        <div class="inner">我是div元素</div>
+    </div>
+    <div class="box4">
+        <!-- 块级元素 -->
+        hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world
+        hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world
+        hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world
+        hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world
+        hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world
+    </div>
+</body>
+</html>

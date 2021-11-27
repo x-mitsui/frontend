@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .parent {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: relative;
+  }
+
+  .son {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    /* margin: 0 auto; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+
+  }
+</style>
+
+<body>
+  <div>
+    123
+  </div>
+
+  <script>
+    // event即为事件对象，由系统自动创建，是事件一系列相关数据的集合，跟事件相关
+    // 鼠标点击就包含了和鼠标相关的信息，鼠标坐标。。。
+    // 键盘点击包含了键盘相关。比如按下了哪个键
+    // ie6,7,8需要window.event来获取
+    let div = document.querySelector('div');
+    // div.onclick = function (event) {
+    //   console.log(event);
+    // 兼容性写法
+    // event=event||window.event;
+
+    // }
+    div.addEventListener('click', function (e) {
+      console.log(e);
+
+    })
+
+
+
+  </script>
+</body>
+
+</html>

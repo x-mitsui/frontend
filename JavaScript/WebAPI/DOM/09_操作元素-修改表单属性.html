@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <button>按钮</button>
+  <input type="text" value="输入内容">
+
+  <script>
+    //利用DOM可以操作的表单元素：type\value\checked\selected\disabled
+    let btn = document.querySelector('button');
+    let input = document.querySelector('input');
+
+
+    btn.onclick = function () {
+      input.value = '被点击了'
+      // btn.disabled = true
+      this.disabled = true
+      //this指向的是事件函数的调用者 btn
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

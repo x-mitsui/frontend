@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <input type="text" class='inp'>
+  <button>发布</button>
+  <ul>
+
+  </ul>
+
+  <script>
+
+    let btn = document.querySelector('button');
+    let input = document.querySelector('input');
+    let ul = document.querySelector('ul');
+
+    btn.onclick = function () {
+      if (input.value != '') {
+        let li = document.createElement('li');
+        li.innerHTML = input.value;
+        ul.appendChild(li);
+        input.value = ''
+      }
+    }
+  </script>
+</body>
+
+</html>

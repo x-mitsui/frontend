@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  ul,
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none
+  }
+
+  #down {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  #down>li {
+    display: inline-block;
+    /* background-color: yellowgreen;  */
+  }
+
+  .first li,
+  .second li,
+  .third li {
+
+    border: 0 solid silver;
+    border-width: 1px 1px 0 0;
+  }
+
+  .first,
+  .second,
+  .third {
+    display: none;
+    border: 0 solid silver;
+    border-width: 0 0 1px 1px;
+    /* padding: 0.5em; */
+  }
+</style>
+
+<body>
+  <div id='down'>
+    <!-- <ul class='Main'> -->
+    <li>
+      <span>微博</span>
+      <ul class='first'>
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+      </ul>
+    </li>
+    <li>
+      <span>博客</span>
+      <ul class='second'>
+        <li>博客评论</li>
+        <li>未读提醒</li>
+      </ul>
+    </li>
+    <li>
+      <span>邮箱</span>
+      <ul class='third'>
+        <li>免费邮箱</li>
+        <li>VIP邮箱</li>
+        <li>企业邮箱</li>
+        <li>新浪邮箱客户端</li>
+      </ul>
+    </li>
+    <!-- </ul> -->
+
+
+
+  </div>
+
+  <script>
+
+    let main_lis = document.querySelector('#down').children;
+    [...main_lis].forEach(elem => {
+      elem.onmouseover = function () {
+        // console.log('滑入');
+
+        this.style.color = 'yellowgreen';
+        this.children[1].style.display = 'block'
+      };
+      elem.onmouseout = function () {
+        // console.log('滑出');
+
+        this.style.color = 'black';
+        this.children[1].style.display = 'none'
+      }
+    });
+  </script>
+</body>
+
+</html>

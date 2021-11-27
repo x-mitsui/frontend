@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>
+    显示系统当前时间
+  </button>
+  <div>某个时间</div>
+
+
+  <script>
+    //element.innerText改变文本内容
+    //点击按钮后div中文字发生变化
+    let btn = document.querySelector('button');
+    let timeLabel = document.getElementsByTagName('div')[0];
+    btn.onclick = function () {
+      timeLabel.innerText = new Date()
+    }
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

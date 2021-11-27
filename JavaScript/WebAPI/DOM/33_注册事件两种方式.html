@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+  <button class="tradition">传统注册事件</button>
+  <button>方法监听注册事件</button>
+  <script>
+    //传统注册方式:“以on开头的事件”
+    //<button onclick="alert('hi~')">test</button>
+    //btn.onclick=function(){}
+    //注册事件唯一
+
+    let btns = document.querySelectorAll('button');
+    btns[0].onclick = function () {
+      alert("hehe")
+    }
+    btns[0].onclick = function () {
+      alert("haha")
+    }
+    //方法监听注册方式
+    //addEventListener同一个元素同一个事件可以注册多个监听器
+    //按注册顺序依次执行 IE9以上，IE9以下用attachEvent
+    btns[1].addEventListener('click', function () {
+      alert(11)
+    })
+    btns[1].addEventListener('click', function () {
+      alert(22)
+    })
+
+
+  </script>
+</body>
+
+</html>

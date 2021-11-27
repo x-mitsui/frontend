@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box {
+            height: 200px;
+            background-color: #f00;
+
+            /* 1、普通文本 */
+            /* text-align: center; */
+            /* 2、普通文本 */
+            /* text-align: center; */
+            /* 3、 行内替换元素 */
+            /* text-align: center; */
+            /* 4、 inline-block居中 */
+            text-align: center;
+            /* 5、 继承后产生效果 */
+            text-align: center;
+        }
+        .strong {
+            background-color: purple;
+        }
+        .ib {
+            
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            text-align: center;
+        }
+        .block {
+            background-color: #0f0;
+            width: 200px;
+            height: 100px;
+        }
+        .block2 {
+            background-color: #0f0;
+            width: 200px;
+            height: 100px;
+            /* text-align:center无效，虽然设置了宽度，但它实质上还是占据一整行 */
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!--1、 普通元素 -->
+        <!-- div元素 -->
+        <!-- 2、行内元素 -->
+        <!-- <strong>strong元素</strong> -->
+        <!-- 3、 行内替换元素 -->
+        <!-- <img src="../exercise3/img/2.png" alt=""> -->
+        <!-- 4、行内块级元素：inline-block -->
+        <!-- <div class="ib"></div> -->
+        <!-- 5、块级元素：block -->
+        <!-- <div class="block">哈哈哈</div> -->
+        <!-- 6、块级元素：block2 -->
+        <div class="block2">嘿嘿嘿</div>
+
+
+    </div>
+
+    
+
+</body>
+</html>

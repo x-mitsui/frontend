@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script>
+  // 'use strict' //加上会有提示
+  const HOST = {
+    url: 'www.baidu.com',
+    port: 443
+  }
+  Object.freeze(HOST);
+  HOST.port = 80;//冻结后无法修改
+  console.log('Host:', HOST);
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

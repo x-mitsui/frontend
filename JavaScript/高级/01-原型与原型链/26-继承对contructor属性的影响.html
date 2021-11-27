@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    "use strict"
+
+
+    //继承是原型的继承
+    function User() {
+
+    }
+
+    User.prototype.name = function () {
+        console.log('user name');
+
+    }
+    let hd = new User();
+    hd.name()
+
+    function Member() {
+
+    }
+
+    Member.prototype = Object.create(User.prototype);
+    // Member.prototype.__proto__ = User.prototype;
+
+    console.log(Member.prototype.constructor);
+
+    Member.prototype.constructor = Member;//指定一下，不指定打印会查找父级的constructor，如上
+    console.log(Member.prototype.constructor);
+    Member.prototype.role = function () {
+        console.log('前台会员分类');
+
+    }
+
+    m.role()
+
+
+
+
+
+
+
+</script>
+
+<body>
+
+
+</body>
+
+</html>

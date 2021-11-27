@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 经过测试,n必须在前面,且在本例子中配合交集使用 */
+        /* n为自然数 */
+        /* html没有0这个概念,js有 */
+        /* :nth-child(n) {
+            color: red;
+        } */
+        /* 交集 */
+        
+        /* p:nth-child(n) {
+            color: red;
+        } */
+        /* 偶数 */
+        /* p:nth-child(2n) {
+            color: red;
+        } */
+        /* p:nth-child(even) {
+            color: red;
+        } */
+        /* 奇数 */
+        /* p:nth-child(odd) {
+            color: red;
+        } */
+        /* p:nth-child(2n+1) {
+            color: red;
+        } */
+
+        /* 前5个 */
+        :nth-child(-n+5) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <p>文字内容8</p>
+        <p>文字内容9</p>
+    </div>
+    <p>
+        <span>span文字内容1</span>
+        <span>span文字内容2</span>
+        <span>span文字内容3</span>
+        <span>span文字内容4</span>
+        <span>span文字内容5</span>
+    </p>
+    <div>
+        <strong>strong文字内容1</strong>
+        <strong>strong文字内容2</strong>
+    </div>
+</body>
+</html>

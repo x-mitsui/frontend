@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .box {
+            font-size: 25px;
+            font-weight: 700;
+            /* text-shadow无inset，length值2～3个 */
+            text-shadow: 5px 5px 5px #f00,
+                        -5px 5px 5px #0f0;;
+        }
+        p {
+            width: 200px;
+        }
+        p::first-letter{
+            font-size: 20px;
+            text-shadow: 5px 5px 10px red;
+        }
+        p::first-line{
+            text-shadow: -5px 0px 10px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hello World</div>
+
+    <p>
+        在达80岁高龄的英国王室成员当中有20名女性、7名男性；其中11人为透过婚姻成为王室成员，17人生而为英国王室成员，乔治三世四女玛丽公主为27人中唯一一位同时因血缘和婚姻成为王室成员的人。另外，有4人因身为第一次世界大战时大英帝国敌对方的子女或配偶而被褫夺王室爵位及头衔
+    </p>
+
+</body>
+</html>

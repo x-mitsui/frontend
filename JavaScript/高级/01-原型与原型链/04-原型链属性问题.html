@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 读取对象的属性值时：会自动到原型链中查找
+        // 设置对象的属性值时，不会查找原型链，如果当前对象中没有此属性，直接添加此属性并设置其值
+        // 方法一般定义在原型中，属性一般通过构造函数定义在其对象本身
+        function Fun() {//内部语句：this.protoType={}
+            
+        }
+        Fun.prototype.a="xxx";
+        var fn1= new Fun();
+        var fn2= new Fun();
+        fn1.a="yyy";
+        console.log(fn1.a)
+        console.log(fn2.a)
+        console.log(fn1);//可以发现__proto__中的a和实例中a，共两个a
+
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+
+        Person.prototype.setName=function(name){
+            this.name=name;
+        }
+        Person.prototype.printName=function(nme){
+            console.log(this.name);
+        }
+
+        var p1 = new Person("Tom",12);
+        p1.setName("王二小");
+        p1.printName();
+        console.log(p1);
+        
+
+        console.log(p1.__proto__===p2.__proto__);//true
+        
+    </script>
+</body>
+</html>

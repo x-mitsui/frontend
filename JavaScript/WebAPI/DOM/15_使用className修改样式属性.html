@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+  }
+
+  .change {
+    width: 200px;
+    color: #000;
+    margin: 33px;
+    height: 200px;
+  }
+
+  .first {
+    background-color: #000;
+  }
+</style>
+
+<body>
+
+  <div class="first"></div>
+
+  <button>touch</button>
+
+
+  <script>
+    let button = document.querySelector('button');
+    let div = document.querySelector('div');
+    button.onclick = function () {
+      // div.style.width = '200px';
+      // div.style.color = 'red';
+      // div.style.margin = '33px';
+      // div.style.height = '200px';
+      //样式很多用下面这种会方便一下，另外这种提示方便一些
+      div.className = 'first change';
+    }
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

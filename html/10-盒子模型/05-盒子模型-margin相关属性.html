@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            margin: 0;
+        }
+        /* 1、上下 */
+        /* div {
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            margin-bottom: 20px;
+        } */
+
+        /* 会发生折叠现象，但左右不会发生折叠 */
+        /* .box2 {
+            margin-top: 20px;
+        } */
+
+        /* 2、左右 */
+        div {
+            background-color: #0f0;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        .box1 {
+            margin-right: 20px;
+        }
+        /* 左右不会发生折叠 */
+        .box2 {
+            margin-left: 20px;
+        }
+
+        /* 宽高设置顺序同padding */
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+</html>

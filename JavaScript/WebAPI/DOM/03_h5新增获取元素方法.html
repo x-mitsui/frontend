@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">盒子</div>
+  <div class="box">盒子</div>
+  <div id="nav">
+    <ul>
+      <li>首页</li>
+      <li>产品</li>
+    </ul>
+  </div>
+
+  <script>
+    let p = document.getElementsByClassName('box');
+    console.dir(p)
+    let f = [...p];
+    f.forEach(element => {
+      console.log('element:', element);
+
+    });
+    //获取指定选择器的第一个元素对象
+    let obj = document.querySelector('.box');
+    let obj2 = document.querySelector('li');
+    let obj3 = document.querySelector('#nav');
+    console.log('obj:', obj);
+    console.log('obj2:', obj2);
+    console.log('obj3:', obj3);
+
+    let obj4 = document.querySelectorAll('li');
+    let obj5 = document.querySelectorAll('.box');
+    console.log('obj4', obj4);
+    console.log('obj5', obj5);
+
+
+
+
+
+  </script>
+</body>
+
+</html>

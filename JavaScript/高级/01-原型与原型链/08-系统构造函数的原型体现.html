@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let hd = {};
+        console.log(hd.__proto__ == Object.prototype);
+
+        let arr = [];
+        console.log(arr.__proto__ == Array.prototype);
+
+        let str = '';
+        console.log(str.__proto__ == String.prototype);
+
+        let b = true;
+        console.log(b.__proto__ == Boolean.prototype);
+
+        let n = 3;
+        console.log(n.__proto__ == Number.prototype);
+
+        let test = /^ss$/
+        console.log(test.__proto__ == RegExp.prototype);
+
+
+
+
+    </script>
+</body>
+
+</html>

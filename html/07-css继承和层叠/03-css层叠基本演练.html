@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 基本层叠：后面把前面的层叠掉 */
+        /* css允许多个相同名字的css属性层叠同在一个元素上 */
+        /* 层叠后的结果是只有一个css属性会生效 */
+        .box15 {
+            color: black;
+        }
+        .box16 {
+            background-color:red;
+            color: purple !important;
+        }
+        .box17 {
+            width: 300px;
+            color: orange;
+        }
+        /* 给第二个div设置样式 */
+        /* 当选择器不同时，就不能按照基本层叠来理解了 */
+        /* 需要知道选择器的权重: */
+        /* !important:10000 */
+        /* 内联样式：1000 */
+        /* id选择器:100 */
+        /* 类选择器、属性选择器、伪类:10 */
+        /* 元素选择器、伪元素:1 */
+        /* 通配符：0 */
+
+        /* 权重的比较：从权重值最大的开始比较每一种权重的数量多少，数量多的则优先级高，即可结束比较 */
+        /* 如果数量相同，比较下一个较小的权重，以此类推 */
+        /* 如果所有权重值比较完毕后，发现数量相同，就采取“就近原则” */
+        div {
+            color: red;
+        }
+        .box {
+            color: green;
+        }
+        #main {
+            color: blue;
+        }
+        #main2 {
+            color: blue;
+        }
+        .box1.box2.box3.box4.box5.box6.box7.box8.box9.box10.box11{
+            color: thistle;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box15 box16 box17">哈哈哈哈哈哈</div>
+
+    <div id="main" class="box" style="color: grey;">呵呵呵呵</div>
+
+    <div id="main2" class="box1 box2 box3 box4 box5 box6 box7 box8 box9 box10 box11">我是比较权重的，注意比较的原则，不是简单的累加计算</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    "use strict"
+    let user = {
+        show() {
+            return this.name
+        }
+    }
+
+    let hd = Object.create(user,
+        {
+            name: {
+                value: "后盾人",
+                writable: true,
+                configurable: true
+            }
+        }
+    );
+    console.log(hd.__proto__ == user);
+
+
+    console.log(hd.show());
+
+//__proto__是浏览器提供的，竟然不是官方提供的^_^
+//__proto__相对来说既是getter也是setter
+</script>
+
+<body>
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            margin-bottom: 30px;
+        }
+
+        /* 会发生折叠现象，但左右不会发生折叠 */
+        /* 如果防止折叠:设置一个就行了 */
+        /* 父子margin也会折叠 */
+        /* 折叠给段落带来了便利 */
+        .box2 {
+            margin-top: 10px;
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+</html>

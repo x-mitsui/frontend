@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  // let handle = function () {
+
+  //   let i = 0;
+  //   (function run() {
+  //     console.log(':' + i);
+
+  //     if (i++ < 10) {
+  //       setTimeout(run, 2000)
+  //     }
+
+
+  //   })()
+
+  // }
+  // handle()
+
+  //--------------
+  // 对比上下两种写法所传达的信息
+  // 计时器模块先执行计时将setTimeOut的回调送入宏任务队列，当主线程和微任务队列执行完再执行宏任务队列
+  //--------------
+  let i = 0;
+  function run() {
+    i++;
+    console.log(':' + i);
+
+  }
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+  setTimeout(run, 2000)
+  for (let i = 0; i < 30000; i++) {
+
+
+  }
+</script>
+
+<body>
+
+</body>
+
+</html>

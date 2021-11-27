@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table {
+    border: 1px solid silver;
+    margin: 100px auto;
+    width: 500px;
+    border-spacing: 0;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+
+    border: 1px solid #333;
+  }
+
+  thead tr {
+    height: 40px;
+    background-color: #ccc;
+  }
+</style>
+
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>科目</th>
+        <th>成绩</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <script>
+    let datas = [{
+      name: '魏婴洛',
+      subject: "JS",
+      score: 100
+    }, {
+      name: '张三',
+      subject: "TS",
+      score: 80
+    },
+    {
+      name: '李四',
+      subject: "PHP",
+      score: 90
+    },
+    {
+      name: '王武',
+      subject: "VB",
+      score: 50
+    }]
+
+    let tbody = document.querySelector('tbody');
+    datas.forEach((data) => {
+      let tr = document.createElement('tr');
+      tbody.appendChild(tr);
+      Object.values(data).forEach((elem) => {
+        let td = document.createElement('td');
+        td.innerHTML = elem;
+        tr.appendChild(td);
+      })
+      let deleteElem = document.createElement('td');
+      deleteElem.innerHTML = '<a href="javascript:;">删除</a>';
+
+      tr.appendChild(deleteElem);
+      deleteElem.onclick = function () {
+        tr.parentNode.removeChild(tr)
+      }
+
+
+    })
+    let ul = document.querySelector('ul');
+
+
+
+  </script>
+</body>
+
+</html>

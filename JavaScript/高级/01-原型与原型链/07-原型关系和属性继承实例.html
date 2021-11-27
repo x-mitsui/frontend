@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let hd = new Object();
+        hd.name = "后盾人";
+        console.dir(Object);
+        console.dir(Object.__proto__);
+        console.dir(Object.__proto__.__proto__);
+        console.dir(Object.__proto__.__proto__.__proto__);
+
+        Object.prototype.show = function () {
+            console.log('houdunren.com');
+
+        }
+        hd.show();
+
+        function User() {
+        }
+        console.dir(User)
+        // User的prototype和__proto__最终都指向Object.prototype
+        console.log(User.prototype.__proto__ == User.__proto__.__proto__);
+        console.log(User.prototype.__proto__ == Object.prototype);
+        User.show();
+
+
+
+    </script>
+</body>
+
+</html>

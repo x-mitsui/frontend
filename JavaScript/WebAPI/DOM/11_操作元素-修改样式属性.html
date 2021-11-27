@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    width: 200px;
+    height: 200px;
+    background-color: #f5f;
+  }
+</style>
+
+<body>
+
+
+  <div>按钮</div>
+
+
+  <script>
+
+    let div = document.querySelector('div');
+    div.onclick = function () {
+      // 相当于行内样式 驼峰命名
+      div.style.backgroundColor = 'blue';
+      div.style.width = '250px'
+    }
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

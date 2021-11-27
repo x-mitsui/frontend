@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box1 {
+            background-color: rgb(78, 78, 32);
+            width: 100px;
+            height: 100px;
+        }
+        .box2 {
+            background-color: rgb(25, 33, 104);
+            width: 200px;
+
+            /* 触发BFC */
+            overflow:hidden
+        }
+        .inner {
+            background-color: purple;
+            width: 100px;
+            height: 100px;
+/* 条件：和父元素底线重叠，且父元素高度auto */
+            margin-bottom: 20px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!-- 如何防止出现传递问题 
+        给父元素设置padding-top、padding-bottom
+        给父元素设置border
+        处罚BFC block format context（可以理解为结界）：设置overflow为auto、hidden
+        浮动可以触发
+        设置一个元素的overflow为非visible，overflow:hidden auto scroll
+    -->
+    <div class="box2">
+        <div class="inner"></div>
+    </div>
+    <div class="box1"></div>
+
+
+</body>
+</html>

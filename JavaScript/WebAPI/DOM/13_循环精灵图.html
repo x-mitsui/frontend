@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  li {
+    background-image: url('./res/13/taobaoSprite.png');
+    width: 24px;
+    height: 24px;
+    /* 下面设置整张图片的值 */
+    /* background-size: 24px 10px; */
+  }
+</style>
+
+<body>
+
+  <!-- <img src="./res/13/taobaoSprite.png" alt="">
+  <img src="./res/13/taobaoSprite.png" alt="">
+  <img src="./res/13/taobaoSprite.png" alt="">
+  <img src="./res/13/taobaoSprite.png" alt="">
+  <img src="./res/13/taobaoSprite.png" alt="">
+  <img src="./res/13/taobaoSprite.png" alt="">
+  <img src="./res/13/taobaoSprite.png" alt="">
+  <img src="./res/13/taobaoSprite.png" alt=""> -->
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+
+  <script>
+    let lis = document.getElementsByTagName('li');
+    [...lis].forEach((elem, index) => {
+      // elem.style.backgroundImage = "url('./res/13/taobaoSprite.png')";
+      elem.style.backgroundPosition = '0 ' + (-44 * index) + 'px';
+
+    })
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

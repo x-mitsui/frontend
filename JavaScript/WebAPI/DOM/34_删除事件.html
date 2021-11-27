@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+  <button class="tradition">传统注册事件</button>
+  <button>方法监听注册事件</button>
+  <script>
+    //传统删除方式:
+    let btns = document.querySelectorAll('button');
+    btns[0].onclick = function () {
+      alert("hehe")
+      this.onclick = null
+    }
+
+    //方法监听删除方式
+
+    btns[1].addEventListener('click', cal)
+    function cal(params) {
+      alert(11)
+      btns[1].removeEventListener('click', cal)
+    }
+
+
+  </script>
+</body>
+
+</html>

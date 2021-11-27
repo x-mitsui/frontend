@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+<style>
+  /* 样式重置 */
+  body {
+    background-color: #0B5B9E;
+    /*#0188e9*/
+    ;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* 整体样式 */
+  /* 每一个li样式 */
+  .page ul li {
+    display: inline-block;
+    background-color: #2DB7F5;
+
+  }
+
+  .page ul li:hover {
+    background-color: #57c5f7;
+  }
+
+  .page ul li a {
+    display: inline-block;
+    /* background-color: #5c75f7; */
+    width: 42px;
+    height: 22px;
+    padding: 6px 15px;
+    border: 1px;
+    /* 居中 */
+    font-size: 14px;
+    text-align: center;
+    line-height: 27px;
+  }
+
+  .page .previous {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  .page .next {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .page .previous a,
+  .page .next a {
+    width: 74px;
+
+  }
+</style>
+
+<body>
+  <div class="page">
+    <ul>
+      <li class="previous"><a href="#">&lt;上一周</a></li>
+      <li><a href="#">今天</a></li>
+      <li class="next"><a href="#">下一周&gt;</a></li>
+    </ul>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪元素是行内元素 */
+        span::before {
+            /* content不能省 */
+            content: "1";
+            color: red;
+            display: inline-block;
+            width:30px;
+            height:40px;
+            background-color: #333;
+            margin-right: 20px;
+        }
+        span::after {
+            /* content不能省 */
+            content: url("../exercise3/img/3.jpeg");
+
+            margin-left: 20px;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <span class="num">我是span元素</span>
+    
+</body>
+</html>

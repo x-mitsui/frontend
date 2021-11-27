@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script>
+
+  //1
+  // var screenLeft = 88;//改变window属性
+
+  // console.log(window.screenLeft);
+
+  //2
+  let screenLeft = 88;//不改变window属性
+
+  console.log(window.screenLeft);
+
+  //3 可以重复声明a
+  var a = 666
+  var a = 666
+  var a = 666
+  var a = 666
+  var a = 666
+  var a = 666
+  var a = 666
+  // //4 不可以重复声明a
+  // let z = 666
+  // let z = 666
+  //5
+  let web = "www.baidu.com";
+  function show(params) {
+    let web = 'www'
+  }
+  show()
+  console.log('web:', web);
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            1、要加载url
+            2、窗口的名称或者窗口的目标
+            3、一串具有特殊意义的字符串
+        */
+        //这样就可以把js放在其他地方了
+        //这种传统注册事件方式只能写一次，如果有多个会以最后一个window.onload为准
+        //load事件是等页面全部加载完毕，包含页面dom元素 图片 css flash等等
+        window.onload = function () {
+            var obtn = document.getElementById("btn");
+            obtn.onclick = function () {
+                //打开新窗口加载url，每次点击都加载新窗口
+                // open("http://www.baidu.com");
+                //打开新窗口并起一个名字，在此点击按钮打开的还是这个窗口
+                // open("http://www.baidu.com","百度");
+
+                open("http://www.baidu.com", "百度", "width=400,height=400,top=200,left=200");
+            }
+        }
+        //新方式，注册事件无限制
+        window.addEventListener('load', function () {
+            //执行js代码
+        })
+
+        //IE9以上,仅当DOM加载完成，不包括样式表，图片，flash等，
+        //如果页面的图片很多的话，从用户访问到onload触发可能需要很长的事件，
+        //交互效果就不能实现，影响用户体验，此时用下面这个方法比较合适。
+        document.addEventListener('DOMContentLoaded', function () {
+
+        })
+    </script>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn" />
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <style>
+    /* 样式重置 */
+    body {
+      background-color: #0B5B9E;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    button {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+    }
+
+    .touchBar {
+      position: fixed;
+      left: 10px;
+      bottom: 15px;
+
+    }
+
+    .touchBar button {
+      display: block;
+      width: 36px;
+      height: 36px;
+      background-color: #2d8cf0;
+
+      margin-bottom: 5px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      cursor: pointer;
+    }
+
+    .touchBar button:hover {
+      background-color: #57a3f3;
+    }
+
+    .touchBar button i {
+      display: block;
+      width: 20px;
+      height: 20px;
+      /* background-color: #f00; */
+      margin: 8px auto;
+      background-image: url(./res/calendar-outline.svg);
+    }
+
+    .touchBar button i.attendance {
+      display: block;
+      background-image: url(./res/people-outline.svg);
+    }
+
+    .touchBar button i.schedule {
+      display: block;
+      background-image: url(./res/calendar-outline.svg);
+    }
+
+    .touchBar button i.close {
+      display: block;
+      background-image: url(./res/power-outline.svg);
+    }
+
+    .touchBar button i.listSwitch {
+      display: block;
+      background-image: url(./res/list-outline.svg);
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="touchBar"">
+    <button><i class=" attendance"></i></button>
+    <button><i class="schedule"></i></button>
+    <button class="exit"><i class="close"></i></button>
+    <button><i class="listSwitch"></i></button>
+  </div>
+
+
+</body>
+
+</html>

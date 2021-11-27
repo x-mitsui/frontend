@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <button class="a0">刘德华</button>
+  <button class="a1">张学友</button> <br>
+
+  <a href="http://www.baidu.com/s?wd=刘德华">
+    <img src="./res/08/0.jpeg" alt="" id='image' title="刘德华">
+  </a>
+
+  <script>
+    //常用元素的属性操作
+    // innerHTML innerText
+    // src href
+    // id alt title
+    let image_arr = [
+      "./res/08/0.jpeg",
+      "./res/08/1.jpeg"
+    ]
+    let a0 = document.getElementsByClassName('a0')[0];
+    let a1 = document.getElementsByClassName('a1')[0];
+    let img = document.getElementById('image');
+    let a = document.querySelector('a');
+    a0.onclick = function () {
+      img.src = image_arr[0]
+      img.title = '刘德华'
+      a.href = "http://www.baidu.com/s?wd=刘德华"
+    }
+    a1.onclick = function () {
+      img.src = image_arr[1]
+      img.title = '张学友'
+      a.href = "http://www.baidu.com/s?wd=张学友"
+    }
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

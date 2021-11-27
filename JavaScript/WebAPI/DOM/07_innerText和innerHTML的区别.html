@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div></div>
+  <p>
+    我是文字
+    <span>123</span>
+  </p>
+
+
+  <script>
+    //innerText识别html标签，非标准 ，“读”时，会去除空格和换行
+    //innerHTML不识别html标签 W3C标准
+    let div = document.querySelector('div');
+    div.innerText = '你好呀piapia～～'
+    div.innerText = '<strong>你好呀piapia～～</strong>'
+    div.innerHTML = '<strong>你好呀</strong>piapia～～'
+    //这两个属性是可读写的
+
+    let p = document.querySelector('p');
+    console.log(p.innerText);
+    console.log(p.innerHTML);
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

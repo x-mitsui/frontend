@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+        }
+        .inner {
+            height: 30px;
+            background-color: #ff0000;
+        }
+        .pa {
+            height: 20px;
+            background-color: black;;
+        }
+        .spannn {
+            height: 20px;
+            background-color: blue;
+        }
+        strong {
+            height: 20px;
+            background-color: green;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <!-- 
+        块级元素：独占父元素一行 都是非替换元素。可以设置宽高
+        行内级元素：和其它元素可以在同一行显示 
+    -->
+
+    <!-- 块级元素 -->
+
+    <div class="box">
+        <div class="inner">
+
+        </div>
+        <p class="pa">我是段落</p>
+    </div>
+
+    <!-- 因为上一个div也独占一行，所以这个span下移 -->
+    <span class="spannn">fffsfsdfs</span>
+    <strong>sfsfsfs</strong>
+    <img src="../exercise3/img/3.jpeg" alt="">
+    <input type="text">
+
+    <!-- 
+        替换元素：元素本身没有内容，浏览器会根据元素的类型和属性，来决定元素具体的显示内容，替换元素都是行内元素
+        非替换元素：正好相反，是什么显示什么
+        行内级元素且非替换元素不可以设置宽高
+        行内级元素且替换元素可以设置宽高
+    -->
+    
+    <!-- inner-block可以让元素同时具备块级、行内级元素的特征 -->
+    <!-- 跟其他行内级元素在同一行显示 -->
+    <!-- 可以随意设置宽高 -->
+    <!-- 宽高默认由内容决定 -->
+    <!-- 可以理解为对外为行内级元素 -->
+    <!-- 对内来说，它是一个块级元素 -->
+    <!-- block：block block -->
+    <!-- inline： inline inline -->
+    <!-- inline-block：inline block -->
+    <!-- 常见用途：让行内级非替换元素 （比如a、span等）能够随时设置宽高 -->
+    <!-- 常见用途：让块级元素 （比如div、p等）能够跟其它元素在同一行显示-->
+    
+</body>
+</html>

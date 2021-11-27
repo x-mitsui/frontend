@@ -1,0 +1,3 @@
+
+* #container .box .badge{}
+空格代表子类

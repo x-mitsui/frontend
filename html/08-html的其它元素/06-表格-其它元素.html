@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        table {
+            /* 1. 边框的宽度 2. 实线/虚线 3. 边框的颜色 */
+            /* border: 1px solid #000; */
+            /* border-spacing: 0; */
+            /* 重要：边框合并 */
+            border-collapse: collapse;
+            
+            /* table居中显示 上下100 水平auto*/
+            margin:100px auto
+        }
+        /* th默认加粗 */
+        td, th {
+            border: 1px solid #666;
+            /* margin-top: 0; */
+            padding: 5px;
+            text-align: center;
+        }
+        caption {
+            font-weight: 700;
+            font-size: 25px;
+            /* 增加底部的外边距 */
+            margin-bottom: 20px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>影院电影放映列表</caption>
+        <thead>
+            <tr>
+                <th>单元格1</th>
+                <th>单元格2</th>
+                <th>单元格3</th>
+                <th>单元格4</th>
+                <th>单元格5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+                <td>单元格4</td>
+                <td>单元格5</td>
+            </tr>
+            <tr>
+                <td>单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+                <td>单元格4</td>
+                <td>单元格5</td>
+            </tr>
+        </tbody>
+        <!-- tfoot很少用 -->
+        <tfoot>
+            <tr>
+                <td>脚1</td>
+                <td>脚2</td>
+                <td>脚3</td>
+                <td>脚4</td>
+                <td>脚5</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+    
+    
+    
+</body>
+</html>

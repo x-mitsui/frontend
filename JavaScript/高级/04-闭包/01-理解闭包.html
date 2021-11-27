@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 1、如何产生闭包
+        // 当一个嵌套的内部（子）函数引用了嵌套的外部（父）函数的变量（函数）时，就产生了闭包
+
+        // 2、闭包到底是什么
+        // 使用chrome调试查看
+        // 理解一：闭包是嵌套的内容函数（绝大多数人）
+
+        // 理解二：包含被引用变量（函数）的对象（极少数人）
+        // 注意：闭包存在于嵌套的内部函数中
+
+        // 3、产生闭包的条件
+        // 函数嵌套
+        // 内部函数引用了外部函数的数据（变量/函数）
+        // 执行外部函数从而促使执行内部函数定义，执行定义就会产生闭包
+
+        function fn1() {
+            var a=2;
+            var b='abc';
+            function fn2() {//通过从25行逐步debug可以发现，执行fn2函数定义（注意函数提升）就会产生闭包（不用调用fn2）
+                console.log(a);
+                
+            }
+
+            // var fn2 =function () {//可以用作对比
+            //     console.log(a);
+                
+            // }
+            fn2()
+        }
+        fn1();
+
+
+        
+    </script>
+</body>
+</html>

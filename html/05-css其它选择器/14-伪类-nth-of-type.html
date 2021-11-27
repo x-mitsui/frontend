@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第三个子元素变红 */
+        /* :nth-child(3) {
+            color: red;
+        } */
+        /* 第三个子p元素变红 */
+        /* p:nth-of-type(3) {
+            color: red;
+        } */
+        p:nth-last-of-type(3){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>span文字内容1</span>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <span>span文字内容2</span>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <span>span文字内容3</span>
+        <p>文字内容8</p>
+        <p>文字内容9</p>
+    </div>
+    
+</body>
+</html>

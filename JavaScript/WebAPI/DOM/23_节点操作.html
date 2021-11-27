@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <div>我是div</div>
+  <span>我是span</span>
+  <ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+  </ul>
+  <ol>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+  </ol>
+  <div class="demo">
+    <div class="box">
+      <span class='erweima'>
+
+      </span>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    //父节点
+    let erweima = document.querySelector('.erweima');
+    // let box = document.querySelector('.box');
+    let box = erweima.parentNode;//得到的是离元素最近的父级节点,如果找不到返回null
+    console.log(box);
+
+    //子节点
+    let ul = document.querySelector('ul');
+    // let lis = ul.querySelectorAll('li');
+    let lis = ul.childNodes;//想获得元素节点需要筛选
+    console.log(lis);
+    let arr = []
+    for (const iterator of lis) {
+      if (iterator.nodeType == 1) {
+        arr.push(iterator)
+      }
+    }
+    console.log('arr:', arr);
+
+    let lis_arr = ul.children;//非标准
+    console.log('lis_arr:', lis_arr);
+
+
+    //第一个子元素和最后一个子元素
+    let ol = document.querySelector('ol');
+    console.log('测试1', ol.firstChild, ol.lastChild);
+    console.log('测试2', ol.firstElementChild, ol.lastElementChild);//IE9以上支持
+
+    console.log('测试3', ol.children[0], ol.children[ol.children.length - 1]);
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

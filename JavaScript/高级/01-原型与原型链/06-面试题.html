@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 1
+        function A(params) {
+            
+        }
+        A.prototype.n=1;
+
+        var b= new A();
+
+        A.prototype = {
+            n:2,
+            m:3
+        }
+
+        var c = new A();
+
+        console.log(b.n,b.m,c.n,c.m);//1 undefined 2 3 
+        
+
+        // 1、变种
+        function A(params) {
+            
+        }
+        A.prototype.n=1;
+
+        var b= new A();
+
+        A.prototype.m=3;
+
+        var c = new A();
+
+        console.log(b.n,b.m,c.n,c.m);//1 3 1 3 
+
+        // 2.
+        function F() {
+            
+        }
+        Object.prototype.a = function () {
+            console.log('a()');
+            
+        }
+        Function.prototype.b = function () {
+            console.log('b()');
+            
+        }
+        var f = new F();
+        f.a();//a()
+        f.b();//undefined
+        F.a();//a()
+        F.b();//b()
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    "use strict"
+
+    //__proto__ 既是getter也是setter
+    // let hd = { name: "后盾人" }
+    // hd.__proto__ = {
+    //     show() {
+    //         console.log(this.name);
+
+    //     }
+    // }
+    // hd.__proto__ = 99;//虽然设置成了99，但是下面依然能打印
+    // hd.show();
+    /////////////////////////////////
+    // let hd = {
+    //     name: "houdunren",
+    //     _proto: { changce: "666" },
+    //     get proto() {
+    //         return this._proto
+    //     },
+    //     set proto(obj) {
+    //         if (!(obj instanceof Object)) {
+    //             return
+    //         }
+    //         this._proto = obj
+
+    //     }
+    // }
+    // hd.proto = { ppt: 300 };
+    // hd.proto = 'abc';
+    // console.log(hd);
+    /////////////////////////
+    let hd = {
+        name: "hzs",
+        show() {
+            console.log('pp');
+
+        }
+    }
+    console.log(hd.show.length);
+    console.log(hd.__proto__);
+
+    let M = {}
+    Object.setPrototypeOf(M, hd)
+    console.dir(hd);
+    hd.__proto__ = "后盾人"
+    console.log(hd.__proto__);
+    console.dir(M);
+
+    let T = Object.create(null);
+    console.dir(T);
+
+
+
+
+
+
+
+
+</script>
+
+<body>
+
+
+</body>
+
+</html>

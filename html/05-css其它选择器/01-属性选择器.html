@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [title] {
+            color: red;
+        }
+        [title="one div元素"]{
+            font-size: 40px;
+        }
+
+
+
+        /* 了解就好,用的时候再说 */
+        /* 包含one单词 */
+        [title*="one"]{
+            background-color: #333;
+        }
+        /* 以one单词开头 */
+        [title^="one"]{
+            text-decoration: underline;
+        }
+        /* 以one单词结尾 */
+        [title$="one"]{
+            font-weight: 700;
+            font-style: italic;
+            
+        }
+        /* 包含one单词且one与其它单词空格分开*/
+        [title~="one"]{
+            font-weight: 700;
+            font-style: italic;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 目的:把这些元素都变成红色 -->
+    <div title="one div元素">我是div元素</div>
+    <p title="p one">我是p元素</p>
+    <p>我是p元素2</p>
+    <span title="one span元素">我是span元素</span>
+</body>
+</html>

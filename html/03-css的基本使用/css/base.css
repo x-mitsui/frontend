@@ -1,0 +1,22 @@
+/* 04-css文件的编码：指定css的编码 */
+@charset "utf-8";
+
+h1 {
+    color:red;
+    font-size: larger;
+}
+
+p {
+    color:blue;
+}
+
+/* 可多次使用 */
+.purple {
+    color: purple;
+}
+/* 并集选择器，可以一次使用多个 */
+div {
+    font-size:50px;
+    width:200px;
+    height: 50px;
+}

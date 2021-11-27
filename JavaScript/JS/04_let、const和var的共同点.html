@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+
+
+
+
+  //下面let const var 互相替换后打印相同
+
+  let web = "www.baidu.com"
+  var key = "111"
+
+  function test() {
+    var key = "666"
+    console.log(web);
+    console.log(key);
+    const value = 78;
+    function show(params) {
+      console.log('value:' + value);
+
+    }
+    show()
+  }
+  test()
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

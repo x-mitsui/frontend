@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 1、将函数作为另一个函数的返回值
+        // 2、将函数作为实参传递给另一个函数使用
+
+        function fn1() {
+            var a=2;//此时闭包就已经产生了（因为函数提升，内部函数对象已经创建了）
+
+            function fn2() {//通过从25行逐步debug可以发现，执行fn2函数定义（注意函数提升）就会产生闭包（不用调用fn2）
+                a++;
+                console.log(a);
+            }
+            return fn2
+        }
+        var f=fn1()
+        f()//3
+        f()//4
+
+        f=null;//闭包死亡（包含闭包的函数对象由于失去了引用成为了垃圾对象）
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  class User {
+    constructor(name) {
+      this.name = name;
+    }
+    getName() {//User.prototype.getName
+      console.log(this.name)
+    }
+    static print() {//User.print
+      console.log("eeee")
+    }
+  }
+
+  const u = new User("xiaoming");
+  u.getName();
+  User.print()
+  console.log(typeof User)
+  let Hd = class { }
+  console.log(Hd)
+  let hd = new Hd();
+  console.dir(hd)
+</script>
+
+<body>
+
+</body>
+
+</html>

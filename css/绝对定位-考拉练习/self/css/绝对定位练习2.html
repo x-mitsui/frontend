@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <style>
+    .app {
+      position: relative;
+      /* 为了能看见下拉出来的东西 */
+      left: 300px;
+      background-color: #f00;
+    }
+
+    .app>span {
+      font-size: 12px;
+    }
+
+    .app .qrcode {
+      /* display: none; */
+      position: absolute;
+      /* left: -64px;
+      margin-left: 50%; */
+      left: 0;
+      /* transform: translate(-50%); */
+      margin-left: 50%;
+      top: 37px;
+
+
+      padding: 5px 5px 0;
+      border: 1px solid #eaeaea;
+
+
+    }
+
+    .app .qrcode span {
+      display: block;
+      text-align: center;
+      margin-top: 2px;
+      font-size: 14px;
+
+    }
+
+    .arrow {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      margin: 0 auto;
+      bottom: 173px;
+
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+      border-left: 1px solid #eaeaea;
+      border-top: 1px solid #eaeaea;
+      background-color: #fff;
+    }
+
+    .app span:hover+.qrcode {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="app" href="#">
+    <span>手机考拉</span>
+    <span class="qrcode">
+      <span class="arrow"></span>
+      <img src="../../20_海购考拉/img/qrcode-app.png" alt="">
+      <span>下载APP</span>
+      <span>领1000元新人礼包</span>
+    </span>
+  </a>
+
+
+</body>
+
+</html>

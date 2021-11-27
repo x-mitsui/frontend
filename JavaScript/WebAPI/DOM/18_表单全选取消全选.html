@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  table tr {
+    border: 1px solid #999;
+    padding: 0;
+  }
+
+  table tr th,
+  table tr td {
+    border: 1px solid #999;
+    border-collapse: collapse;
+  }
+
+  table tr th {
+    background-color: rgb(13, 128, 103);
+  }
+</style>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox"></th>
+        <th>商品</th>
+        <th>价钱</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>iPhone8</td>
+        <td>8000</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>iPad Pro</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>iPad Air</td>
+        <td>2000</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Apple Watch</td>
+        <td>2000</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+  <script>
+
+    let bodyChecks = document.querySelector('tBody').getElementsByTagName('input');
+    let headCheck = document.querySelector('tHead').querySelector('input');
+    let AllchecksOK = function () {
+      let flag = true
+      for (const iterator of [...bodyChecks]) {
+        if (!iterator.checked) {
+          flag = false;
+          break;
+        }
+      }
+      return flag
+    }
+
+    headCheck.onclick = function () {
+      console.log('headcheck');
+
+      // if (this.checked == false) {
+      //   console.log('headcheck0');
+
+
+      //   [...bodyChecks].forEach(value => {
+      //     value.checked = false
+      //   })
+      // } else {
+      //   console.log('headcheck1');
+
+
+      //   [...bodyChecks].forEach(value => {
+      //     value.checked = true
+      //   })
+      // }
+      [...bodyChecks].forEach(value => {
+        value.checked = this.checked
+      })
+    };
+    [...bodyChecks].forEach(value => {
+      value.onclick = function () {
+        if (this.checked) {
+          if (AllchecksOK()) {
+            headCheck.checked = true
+          }
+        } else {
+          if (!AllchecksOK()) {
+            headCheck.checked = false
+          }
+        }
+      }
+    })
+
+
+
+  </script>
+</body>
+
+</html>

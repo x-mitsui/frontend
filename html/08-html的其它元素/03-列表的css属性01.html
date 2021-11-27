@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* 这是ul和ol的区别，哈哈哈 */
+        /* ul {
+            list-style-type: decimal;
+        }  */
+
+        /* 真是开发 */
+        ul {
+
+            list-style-type: none;/*这个用的比较多*/
+            padding: 0px;
+            margin: 0px;
+        }
+        ul li {
+            margin-top: 8px;
+        }
+        ul li span {
+            background-color: #f00;
+            color: #fff;
+            padding:0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- li会继承ol ul的css属性 -->
+    <ul>
+        <li>皮鞋</li>
+        <li>臭皮鞋</li>
+        <li>算皮鞋</li>
+        <li>老皮鞋</li>
+        <li>酸皮鞋</li>
+    </ul>
+
+    <ul>
+        <li><span>1</span>皮鞋</li>
+        <li><span>2</span>臭皮鞋</li>
+        <li><span>3</span>算皮鞋</li>
+        <li><span>4</span>老皮鞋</li>
+        <li><span>5</span>酸皮鞋</li>
+    </ul>
+    
+</body>
+</html>

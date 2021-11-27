@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/* 广告相关的样式 */
+#header .ad {
+  overflow: hidden;
+}
+
+#header .ad img {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+/* 导航相关的样式 */
+#header .nav {
+  /* 手动设置div高度 */
+  height: 30px;
+  /* 文字垂直居中 */
+  line-height: 30px;
+  background-color: #000;
+}
+
+#header .nav-left .welcome {
+  float: left;
+}
+#header .nav-left .account {
+  float: left;
+}
+#header .nav-left .account li {
+  float: left;
+}
+#header .nav li {
+  margin-left: 30px;
+}
+#header .nav a {
+  color: #999;
+  display: inline-block;
+  height: 30px;
+}
+#header .nav a:hover {
+  color: #fff;
+}
+
+#header .nav-right,
+#header .nav-right .group1,
+#header .nav-right .group2 {
+  float: right;
+}
+
+#header .nav-right li {
+  float: left;
+}
+#header .nav-right .group2 {
+  margin-left: 20px;
+}
+#header .nav-right .group2 li {
+  margin-left: 0;
+}
+#header .nav-right .group2 li a {
+  padding: 0 12px 0 12px;
+}
+#header .nav-right .group2 a:hover {
+  background-color: #fff;
+  color: #ff1e32;
+}
+#header .nav-right .group2 li a span {
+  position: relative;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border: 4px solid #999;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  top: 2px;
+  left: 5px;
+  transform-origin: center 2px;
+  transition: transform 330ms ease-in;
+}
+#header .nav-right .group2 li a:hover span {
+  transform: rotate(180deg);
+  border-top-color: #ff1e32;
+}
+
+/* 3.logo-search-cart */
+#header .operation {
+  position: relative;
+  height: 100px;
+  /* background-color: #0ff; */
+}
+#header .operation img {
+  /* 图片垂直居中 */
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+#header .operation .search {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  float: right;
+  width: 403px;
+  border: 2px solid #ff2337;
+
+  background-color: #fff;
+  padding: 6px 39px 6px 30px;
+  border-radius: 40px;
+}
+#header .operation .search i {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 14px;
+  width: 14px;
+  background-image: url("../assets/img/kl-sprite-01.png");
+  background-position: -466px -667px;
+}
+#header .operation .search input {
+  height: 24px;
+  width: 400px;
+}
+
+#header .operation .search input::placeholder {
+  font-size: 12px;
+  font-style: italic;
+}
+#header .operation .search span {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  height: 40px;
+  width: 60px;
+  border-radius: 40px;
+  /* background-color: #ff2337; */
+  background: #ff2337 url("../assets/img/icon-search.png") no-repeat center center;
+}

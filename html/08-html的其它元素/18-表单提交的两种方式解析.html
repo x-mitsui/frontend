@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <!-- 1、传统的表单提交
+        将所有的input包裹到一个form中
+        form设置action(服务器地址)
+        input/button类型是submit
+        点击submit，自动将所有数据提交到服务器
+        弊端：会进行页面的跳转，意味着服务器必须提
+        前将一个页面写好返回给前端，前端展示这个页面，
+        服务器提前将页面写好叫服务端渲染 
+        弊端二：不方便表单数据的验证
+    
+        2、前后端分离
+        通过Javascript获取到所有表单内容
+        通过正则表达式进行表单的验证
+        发送ajax请求，将数据传递给服务器
+        验证成功后，服务器会返回结果，需要前端解析这个数据，并且决定显示什么内容
+    -->
+    
+    <form action="">
+        <fieldset>
+            <legend>必填信息</legend>
+            <div>
+                <span>手机：</span>
+                <input type="text">
+            </div>
+            
+            <div>
+                <span>密码：</span>
+                <input type="password">
+            </div>
+            <div>
+                <span>验证码：</span>
+                <input type="text">
+                <!-- button实现方式1: -->
+                <!-- <button>获取验证码</button> -->
+                <!-- button实现方式2: -->
+                <input type="button" value="获取验证码">
+            </div>
+        </fieldset>
+    
+        <fieldset>
+            <legend>选填信息</legend>
+            <div>
+    
+                <span>照片：</span>
+                <input type="file">
+            </div>
+            <div>
+    
+                <span>性别：</span>
+                <!-- name要一样 -->
+                男<input type="radio" name="sex">
+                女<input type="radio" name="sex">
+            </div>
+            <div>
+    
+                <span>爱好：</span>
+                <!-- name要一样 -->
+                唱<input type="checkbox" name="hobby">
+                跳<input type="checkbox" name="hobby">
+                rap<input type="checkbox" name="hobby">
+                篮球<input type="checkbox" name="hobby">
+            </div>
+            <div>
+                <span>学历：</span>
+                <select name="" id="" multiple="2" size="2">
+                    <!-- 上传服务器的是value而不是名称 -->
+                    <option value="0">小学</option>
+                    <option value="1">初中</option>
+                    <option value="2">高中</option>
+                    <option value="3">大学</option>
+                </select>
+            </div>
+            <div>
+                <span>简介：</span>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+
+        <!-- 
+        想让下面有反应的前提：
+            1、type必须是reset类型，value可以不写
+            2、所有的内容必须在同一个表单中,比如这里放在form标签里
+        -->
+        <input type="reset" value="重置">
+    </form>
+    
+
+    
+    
+</body>
+</html>

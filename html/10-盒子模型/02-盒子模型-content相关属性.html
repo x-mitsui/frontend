@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box {
+            background-color: #f00;
+
+            /* 1、设置宽度 */
+            /* 1.1 */
+            /* width: 100px; */
+            /* 1.2 最小宽度，当界面小于最小宽度时，会出现滚动条 */
+            /* min-width: 800px; */
+            /* 1.3 最大宽度,当box设置成inline-block时，会包裹内容，当内容很多时，就可能会产生换行的需求 */
+            max-width:3px;
+            display:inner-block;
+
+            /* 2、设置高度 */
+            height: 100px;
+            min-height: 100px;
+            /* 如果内容过多时，可以配合overflow使用 */
+            max-height: 200px;
+            overflow: hidden;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">a a a a s</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: red !important;
+        }
+        
+        /* 由于不支持这个结构，所以设置css无效 */
+        p div {
+            font-size: 90px;
+        }
+
+        /* 
+        为何有时候编写的css属性不好使，有可能是因为：
+        1、选择器的优先级太低
+        2、选择器没选中对应的元素
+        3、css属性使用形式不对
+            >比如span不支持width和height
+            >浏览器不支持
+            >被同类型的覆盖了比如font-size和font
+
+        多利用浏览器调试
+         */
+    </style>
+</head>
+<body>
+    <div>
+        <p>收拾收拾</p>
+        <a href="#">我是自己设置变色，所以我不受别人影响</a>
+    </div>
+
+    <!-- 下面这个结构div也不支持 -->
+    <p>
+        <div>大是大非</div>
+    </p>
+
+    
+</body>
+</html>

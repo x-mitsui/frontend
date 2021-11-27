@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+    </style>
+    <script type="text/javascript">
+    /*
+        1、要加载url
+        2、窗口的名称或者窗口的目标
+        3、一串具有特殊意义的字符串
+    */
+            
+        window.onload=function(){
+            var obtn = document.getElementById("btn");
+            obtn.onclick=function(){
+                opener.document.write("子窗口让我打印的");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" id = "btn"/>
+</body>
+</html>

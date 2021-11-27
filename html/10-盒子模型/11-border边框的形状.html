@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box1 {
+            background-color: #000;
+            width: 100px;
+            height: 100px;
+
+            /* 运行实例1 */
+            border-top :20px solid #f00;
+            border-left: solid 20px #0f0;
+
+            
+        }
+        .box2,.box3,.box4,.box5 {
+            width: 0px;
+            height: 0px;
+        }
+
+        .box2 {
+            margin-top: 50px;
+            background-color: #000;
+            
+
+            /* 运行实例2 */
+            border-top: 100px solid #f00;
+            border-left: 100px solid #00f;
+
+        }
+        .box3 {
+            margin-top: 50px;
+            border-width: 2px;
+            border-top: 100px solid #f00;
+            border-left: 100px solid #00f;
+            border-right: 100px solid #0ff;
+            border-bottom: 100px solid #0f0;
+
+        }
+        /* 向下的箭头 */
+        .box4 {
+            margin-top: 50px;
+            border-top: 100px solid #f00;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid transparent;
+        }
+        /* 向上的箭头 */
+        .box5 {
+
+            margin-top: 50px;
+            border-top: 100px solid #f00;
+            border-left: 100px solid transparent;
+            transform: rotate(-45deg);
+        }
+        
+
+        
+       
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+</body>
+</html>

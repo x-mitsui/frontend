@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div >span {
+            color: #F00;
+        }
+        /* 类也支持 */
+        .box > span {
+            background-color: greenyellow;
+        }
+        div>p>span {
+            text-align: justify;
+            font-size: 30px;
+            background-color: honeydew;
+        }
+
+    </style>
+</head>
+
+<body>
+    <span>text01</span>
+    <div>
+        <span>
+            text02
+            <span>
+                text06???
+            </span>
+        </span>
+    </div>
+    <div class="box">
+        <span>
+            text03
+            <p>text07</p>
+        </span>
+        <span>
+            text09
+        </span>
+    </div>
+    <div>
+        <p>
+            <span>
+                what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong 
+                what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong 
+                what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong what's wrong 
+                fdsfsdfsdfsdfsdfsdfsdfdsfsdf
+            </span>
+        </p>
+    </div>
+    <span>text04</span>
+</body>
+</html>

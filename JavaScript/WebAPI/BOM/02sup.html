@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+    </style>
+    <script type="text/javascript">
+    /*
+        1、要加载url
+        2、窗口的名称或者窗口的目标
+        3、一串具有特殊意义的字符串
+    */
+            
+        window.onload=function(){
+            var obtn = document.getElementById("btn");
+            obtn.onclick=function(){
+                //浏览器不要全屏状态，不然测试不出效果
+                open("./02sub.html","子窗口","width=400,height=400,top=200,left=200");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="打开子窗口" id = "btn"/>
+</body>
+</html>

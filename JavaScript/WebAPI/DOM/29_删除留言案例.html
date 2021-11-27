@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  ul {
+    width: 200px;
+  }
+
+  li a {
+    float: right;
+  }
+</style>
+
+<body>
+  <input type="text" class='inp'>
+  <button>发布</button>
+  <ul>
+
+  </ul>
+
+  <script>
+
+    let btn = document.querySelector('button');
+    let input = document.querySelector('input');
+    let ul = document.querySelector('ul');
+
+    btn.onclick = function () {
+      if (input.value != '') {
+        let li = document.createElement('li');
+        li.innerHTML = input.value + "<a href='javascript:;'>删除</a>";
+        li.children[0].onclick = function () {
+          ul.removeChild(li)
+        }
+        ul.insertBefore(li, ul.children[0]);
+        input.value = ''
+      }
+    }
+
+  </script>
+</body>
+
+</html>

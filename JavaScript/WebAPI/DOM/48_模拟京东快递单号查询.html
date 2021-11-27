@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <div class='search'>
+    <div class="con"></div>
+    <input type="text" name="请输入快递单号" id="" class='jd'>
+  </div>
+
+  <script>
+    let con = document.querySelector('.con');
+    let jd_input = document.querySelector('.jd');
+    //此处没用keydown的原因：keydown和keypress在文本框里的特点：
+    //而且keypress不能触发功能键
+    //他们两个事件触发的时候，文字还没有落入文本框
+    //keyup事件触发的时候，文字已经落入文本框里面了
+    jd_input.addEventListener('keyup', function (e) {
+
+      console.log(e.keyCode);
+      if (this.value.length > 0) {
+        con.style.display = 'block'
+        con.innerText = this.value;
+      } else {
+        con.style.display = 'none'
+      }
+    })
+
+    jd_input.addEventListener('blur', function () {
+      con.style.display = 'none'
+    })
+    jd_input.addEventListener('focus', function () {
+      if (this.value != '') {
+
+        con.style.display = 'block'
+      }
+    })
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

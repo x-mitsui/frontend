@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 交集:选择器之间没有任何的连接符号 */
+        div.one {
+            text-align: justify;
+            font-size: 30px;
+            
+        }
+        div.two[title="xx"] {
+            background-color: honeydew;
+        }
+        /* 并集:以逗号分割 */
+        div, p, .one, [title="xx"] {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="one">sfdsfs</div>
+    <div class="two" title="看看">sfdsfs</div>
+    <p class="one">sfdsfs</p>
+    <span class="sven" title="xx">tttt</span>
+</body>
+</html>

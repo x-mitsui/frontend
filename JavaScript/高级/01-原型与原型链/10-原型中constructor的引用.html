@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        function User(name) {
+            this.name = name
+        }
+
+        console.dir(User);
+
+        console.log(User.prototype.__proto__ == Object.prototype);
+
+        console.log(User.prototype.constructor == User);
+
+        let lisi = new User.prototype.constructor("里斯");
+
+        /*
+        User.prototype={
+            constructor:User,//这种形式要想表现正常，应该把construtor补上
+            show(){
+                console.log(this.name)
+            }
+        }
+        */
+
+        User.prototype.show = function () {
+            console.log(this.name);
+
+        }
+        console.log(lisi);
+        lisi.show()
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

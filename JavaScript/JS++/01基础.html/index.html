@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+
+    // var weekday = prompt('请输入星期几？填数字1～7');
+    // var accurateTime = prompt('上午（0）还是下午(其它)？');
+    // switch (weekday) {
+    //   case '1':
+    //   case '2':
+    //   case '3':
+    //   case '4':
+    //   case '5':
+    //     if (accurateTime == 0) {
+    //       console.log('星期' + weekday + '上午工作');
+    //     } else {
+    //       console.log('星期' + weekday + '下午工作');
+    //     }
+    //     break;
+    //   case '6':
+    //     if (accurateTime == 0) {
+    //       console.log('星期6上午吃大餐');
+    //     } else {
+    //       console.log('星期6下午打球');
+    //     }
+    //     break;
+    //   case '7':
+    //     if (accurateTime == 0) {
+    //       console.log('星期7上午看电影');
+    //     } else {
+    //       console.log('星期7下午购物');
+    //     }
+    //     break;
+    //   default:
+    //     console.log('无效输入');
+    // }
+    // for (let i = 0; i < 10; i++) {
+    //   console.log(i)
+
+    // }
+    /*循环执行步骤：
+      1、声明变量i=0；
+      2、if(i<10){
+         console.log(i)
+      }
+      3、i++
+      继续
+      2、if(i<10){
+         console.log(i)
+      }
+      3、i++
+      }
+    */
+    // var it = 0;
+    // for (; it < 10;) {
+    //   console.log(it)
+    //   it++;
+
+    // }
+    // var it2 = 0;
+    // while (it < 10) {
+    //   it2++;
+    //   console.log(it2)
+
+    // }
+
+    // var i = 1;
+    // for (; i;) {
+    //   console.log(i);
+    //   i++;
+    //   if (i == 11) {
+    //     i = 0;//迫使条件为假，中断循环
+    //   }
+
+    // }
+
+    // for (let i = 0; i < 100; i++) {
+    //   if (i % 7 != 0 && i % 10 != 7) {
+    //     continue;
+    //   }
+    //   console.log(i);
+    // }
+    //打印0-100的数
+    //()中只能有一句，不能写比较
+    //{}不能出现i++ i--
+    // var i = 101;
+    // for (; i--;) {
+    //   console.log(i);
+
+    // }
+
+    // var i = 0;
+    // do {
+    //   console.log('一定会执行一次')
+    // } while (0);
+
+    // //10的n次方
+    // var n = 5;
+    // var num = 1;
+    // for (let i = 0; i < n; i++) {
+    //   num *= 10;
+    // }
+
+    // //n的阶乘
+    // var n = 5;
+    // var num = 1;
+    // for (let i = 1; i <= n; i++) {
+    //   num *= i;
+    // }
+
+    // //翻转789为987
+    // var num = 789;
+    // var a = num % 10;
+    // var b = (num - a) % 100 / 10;
+    // var c = (num - a - b * 10) / 100;
+    // console.log('' + a + b + c);
+
+
+
+    // //打印100以内的质数
+    // var c = 0;
+    // for (var i = 2; i < 100; i++) {
+    //   for (var j = 0; j <= i; j++) {
+    //     if (i % j == 0) {
+    //       c++
+    //     }
+
+    //   }
+    //   if (c == 2) {
+
+    //     console.log(i);
+    //   }
+
+    //   c = 0;
+    // }
+
+    // var person = {
+    //   name: 'xx',
+    //   age: 11,
+    //   height: 110,
+    //   weight: 80,
+    //   job: 'coder'
+    // }
+    // console.log(person);
+
+    // typeof 
+    // number string boolean object undefined function
+    // array/object =>object
+    // undefined=>undefined
+    //
+    // console.log(typeof (1 - 1))//'number'
+    // console.log(typeof (1 - '1'))//'number'
+    // console.log(typeof ('1' - '1'))//'number'
+    // console.log(typeof (xxx_undefined))//'undefined'
+    // console.log(typeof (typeof (xxx_undefined)))//'string'
+
+    // //显式类型转换
+    // var a = '123'
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-123
+
+    // var a = true
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-1
+
+    // var a = false
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-0
+
+    // var a = null
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-0
+
+    // var a = undefined
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-NaN
+
+    // var a = 'a';
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-NaN
+
+    // var a = '1a';
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-NaN
+
+    // var a = '3.14';
+    // console.log(typeof (Number(a)) + '-' + Number(a));//number-3.14
+
+    // // parseInt
+    // var a = true;//true,false,null,undefined,NaN返回均为NaN
+    // console.log(typeof (parseInt(a)) + '-' + parseInt(a));//number-NaN
+
+    // var a = '3.999'
+    // console.log(typeof (parseInt(a)) + '-' + parseInt(a));//number-3
+
+    // var a = 'f';
+    // console.log(parseInt(a, 16));//15,参数2可以取到2-36
+    // var a = '11';
+    // console.log(parseInt(a, 12));//13
+    // console.log(parseInt('abc123'));//NaN
+    // console.log(parseInt('123abc'));//123
+
+    // // parseFloat
+    // console.log(parseFloat('3.1415926'));//3.1415926
+    // console.log(parseFloat('3.1415926').toFixed(3));//3.142
+    // console.log(typeof ('' + 123));//'string'
+
+    // console.log(String('3.1415926'));//3.1415926
+
+    // var str = 100;
+    // console.log(parseInt(str, 16).toString(2))//100000000
+
+    // console.log(Boolean(null));//undefined null 0 '' false NaN均为false，其它为true
+
+    // var num = '123';
+    // console.log(typeof (-num), typeof (+num));
+    // var num = 'abc';
+    // console.log(typeof (+num), (+num));//->number
+
+
+    // //Number(参数)与NaN比较
+    // console.log(isNaN(NaN));//true
+    // console.log(isNaN(123));//false
+    // console.log(isNaN('123'));//false
+    // console.log(isNaN('a'));//true
+    // console.log(isNaN(null));//false
+    // console.log(isNaN(undefined));//true
+
+    // var arr = [1, 1];
+    // var n = 7;
+    // //1 1 2 3 5 8 13 21
+    // for (i = 2; i < n; i++) {
+    //   arr[i] = arr[i - 1] + arr[i - 2];
+    // }
+    // console.log('第n个数是：' + arr[n - 1]);
+    // console.log('test')
+    // if (1 > 0) {
+    //   for (let i = 0; i < 10; i++) {
+    //     console.log(i)
+
+    //   }
+    // }
+    // if (2 > 0) {
+    //   for (let i = 0; i < 10; i++) {
+    //     console.log(i)
+
+    //   }
+    // }
+    // if (3 > 0) {
+    //   for (let i = 0; i < 10; i++) {
+    //     console.log(i)
+
+    //   }
+    // }
+
+
+
+    // //高内聚、低耦合：让一个模块有强功能性，高独立性，表现出单一的责任
+    // //解耦合：去除重复性，函数可以解耦合
+
+    // //函数基本写法,函数只在被调用时才会执行
+    // function test() {
+    //   for (let i = 0; i < 10; i++) {
+    //     console.log(i)
+
+    //   }
+    // }
+
+    //函数名的命名规则
+    //不能数字开头
+    //字母 _ $ 开头
+    //可包含数字
+    //小驼峰命名法(建议) myTest
+
+    //函数声明
+    // function test() {
+    //   var a = 1,
+    //     b = 1;
+
+    //   var c = d = 1;//相当于 d=1,var c=d,d是window的变量
+    // }
+    // test();
+    // console.log(d)
+    // console.log(c)
+    //表达式==字面量
+    // var time = 0
+    // var test = function test1() {
+    //   console.log('hello');
+
+    //   if (time < 5) {
+    //     time++;
+    //     test1();//只能在函数内部调用
+    //   }
+    // }
+    // test()
+    // test1();//函数外部无法调用
+
+    // //这些都是字面量
+    // var a = 1
+    // var a = ''
+    // var a = [1, 3]
+    // var a = { k: 2 }
+
+    // //匿名函数表达式，也称为函数字面量
+    // var test = function () {
+    //   console.log('hello');
+
+    //   if (time < 5) {
+    //     time++;
+    //     test1();//只能在函数内部调用
+    //   }
+    // }
+
+    // 函数构成
+    // function 函数名(参数[可选]) {
+    //   return 返回值
+    // }
+
+    // var aa = Number(window.prompt('a'));
+    // var bb = Number(window.prompt('b'));
+    // function test(a, b) {//a,b形参
+    //   console.log(a + b);
+    // }
+    // test(aa, bb)//aa,bb实参
+
+    //一个函数被调用时，累加它的实参值
+    // function sum() {
+    //   var total = 0;
+    //   for (var i = 0; i < arguments.length; i++) {
+    //     const element = arguments[i];
+    //     total += element;
+    //   }
+    //   console.log(total)
+    // }
+    // sum(1, 2, 3, 4, 5)
+
+    // //函数内部可更改实参的值
+    // function test(a, b) {
+    //   a = 6;//形参改变
+    //   console.log(arguments[0]);//实参也改变
+
+    // }
+    // test(8, 8)
+
+    // //实参未被赋值，内部无法更改
+    // function test(a, b) {
+    //   b = 6;
+    //   console.log(arguments[1]);
+
+    // }
+    // test(8);//undefined
+    // //实参和形参=>一一对应=>映射关系
+
+    // false 0 '' NaN null undefined为假
+    // 如果name为假，或运算后面的无论真假都会返回，注意无论真假
+    // function test(name) {
+    //   return name || '你未填写姓名';
+    // }
+    // console.log(test());
+
+    // b = 2;//全局变量
+    // function test() {
+    //   var a = 2;//局部变量
+    //   console.log(b);//内部可以访问外部的值b
+    //   function test2() {
+    //     var c = 3;//局部变量
+    //     console.log(b);
+    //   }
+    //   test2();
+    // }
+    // test();
+    // console.log(typeof a);//'undefined'
+    // console.log(a);//a is not defined
+
+    // function test1(params) {
+    //   var a = 3;
+    //   console.log(b);
+    // }
+
+    // function test2(params) {
+    //   var b = 3;
+    //   console.log(a);
+    // }
+    // test1();
+    // test2();
+
+
+    // getPrice(window.prompt('输入饮料名字'))
+    // 作业2:定义一个函数，从window.promt接受一个两个变量一个操作符，返回结果
+    // function getResult(a, operator, b) {
+    //   switch (operator) {
+    //     case '+':
+    //       return a + b;
+    //     case '-':
+    //       return a - b;
+    //     case '*':
+    //       return a * b;
+    //     case '/':
+    //       return a / b;
+    //     case '%':
+    //       return a % b;
+    //     default:
+    //       break;
+    //   }
+    // }
+    // console.log(getResult(window.prompt('第一个数'), window.prompt('操作符'), window.prompt('第二个数')))
+    //作业3:定义一个函数，从window.promt接受一个数n，算出n的阶乘，不能用for循环
+    // function getFactorial(n) {
+    //   if (n == 1) {
+    //     return 1
+    //   } else {
+
+    //     return n * getFactorial(n - 1)
+    //   }
+    // }
+    // console.log(getFactorial(1));
+    //作业4:定义一个函数，从window.promt接受一个n，算出斐波那伽数列第n位，不能用for循环
+    // 1 1 2 3 5 8 13 21 
+    // function fab(n) {
+    //   if (n == 1 || n == 2) {
+    //     return 1
+    //   }
+    //   return fab(n - 1) + fab(n - 2)
+    // }
+    // console.log(fab(5));//5
+    // console.log(fab(2));//1
+    // console.log(fab(8));//21
+
+    //初始化参数 b默认值是undefined
+    // function test01(a = 1, b) {
+    //   console.log(a);
+    //   console.log(b);
+    // }
+    // test01()//1 undefined
+    // test01(undefined, 2)//1,2
+
+    // function test02(a = undefined, b) {
+    //   console.log(a);
+    //   console.log(b);
+    // }
+    // test02(1, 2);//1 2
+
+    //针对某一参数，如果实参为undefined，
+    //那么默认将这一参数的默认值赋给形参
+    //如果实参非undefined，那么形参为实参值
+
+    // ES6之前默认值写法
+    // function test03(a, b) {
+    //   a = arguments[0] || 1;
+    //   b = arguments[1] || 2;
+    //   console.log(a);
+    //   console.log(b);
+    // }
+    // test03();//1 2
+    // test03(5);//5 2
+
+    // function test04(a, b) {
+    //   a = typeof (arguments[0]) == 'undefined' ? 1 : arguments[0];
+    //   b = typeof (arguments[0]) == 'undefined' ? 1 : arguments[0];
+    //   console.log(a);
+    //   console.log(b);
+    // }
+    // test03();//1 2
+    // test03(5);//5 2
+
+    // console.log(a);
+    // console.log(a);
+    // console.log(a);
+    // test05()
+    // function test05(a, b) {//函数声明整体提升
+    //   console.log(1);
+    // }
+
+    // console.log(p);//undefined
+    // var p = 1;//声明提升，赋值不提升
+
+    /*******例1*********/
+    // console.log(a);
+    // function a(a) {
+    //   var a = 10;
+    //   var a = function () {
+
+    //   }
+    // }
+    // var a = 1;
+    /*******例1*********/
+
+    // var a = 1;
+    // b = 2;
+    // console.log(window.a);//window.a=a
+    // console.log(window.b);//window.b=b
+
+    // function test(){
+    //   var a= b =6;//相当于var a;b=6;a=b
+    // }
+    // test()
+    // console.log(window.b);//6
+    // console.log(window.a);//undefined window对象不存在的属性
+    // console.log(a);//a is not defined 未定义的变量a
+
+    // function test(a) {
+    //   console.log(a);
+    //   var a = 1;
+    //   console.log(a);
+    //   function a() { }
+    //   console.log(a);
+    //   var b = function () { }
+    //   console.log(b);
+    //   function d() { }
+    // }
+    // test(2);//function a(){}  1 1  function (){}
+
+
+    //预编译：函数执行之前创建了AO--activation object 活跃对象，函数上下文
+    //1、创建AO = {}
+    //2、寻找函数的形参和里面的变量声明；
+    /*AO={
+        a:undefined
+        b:undefined
+      }
+    */
+    //
+    /*3、把实参的变量值赋值给形参
+    AO={
+      a:2,
+      b:undefined
+      d:undefined
+    }
+    */
+
+    /*
+    4、寻找函数声明和赋值
+    AO={
+        a:function a(){};
+        b:function(){}
+        d:function d(){}
+      }
+    */
+
+    /*
+    5、函数执行
+    */
+    // function test(a, b) {
+    //   console.log(a);
+    //   c = 0;
+    //   var c;
+    //   a = 5;
+    //   b = 6;
+    //   console.log(b);
+    //   function b() { }
+    //   function d() { }
+    //   console.log(b);
+    // }
+    // test(2, 3);
+    /*
+    1、AO={
+      a=undefined,
+      b=undefined,
+      c=undefined
+    }
+    2、AO={
+      a=2,
+      b=3,
+      c=undefined
+    }
+    3、
+    AO={
+      a=2,
+      b=function b(){},
+      c=undefined,
+      d=function d(){}
+    }
+    4、
+    AO={
+      a=5,
+      b=6,
+      c=0,
+      d=function d(){}
+    }
+    所以结果：2 6 6
+    */
+
+    // var a = 1;
+    // function a() {
+    //   console.log(2);
+    // }
+    // console.log(a);//1
+    // console.log(a, b);
+    // function a() {
+
+    // }
+    // var b = function () {
+
+    // }
+    // function test() {
+    //   var a = b = 1;
+    //   console.log(a);
+    // }
+    // test();
+
+    // 1、 
+    // AO={
+    //   a:undefined
+    // }
+
+
+    // 2、
+    // GO={
+    //   b:1
+    // }
+    // 3、
+    // AO={
+    //   a:1
+    // }
+    // var b = 3;
+    // console.log(a);
+    // function a(a) {
+    //   console.log(a);
+    //   var a = 2;
+    //   console.log(a);
+    //   function a() {}
+    //   var b = 5;
+    //   console.log(b);
+
+    // }
+    // a(1);
+    /*
+    1、 AO={
+      a:undefined,//两个a重复，只取一个
+      b:undefined
+    }
+    2、 AO={
+      a:1
+b:undefined
+    }
+    3、 AO={
+      a:function a() {},
+      b:undefined
+    }
+    4、
+    function a(a) {
+      console.log(a);
+      var a =2;
+      console.log(a);
+      function a() {
+        var b=5;
+        console.log(b);
+      }
+    }
+    
+    function a() {
+        var b=5;
+        console.log(b);
+      }
+      2
+      5
+    */
+
+    // a = 1;
+    // function test() {
+    //   console.log(a);
+    //   a = 2;
+    //   console.log(a);
+    //   var a = 3;
+    //   console.log(a);
+    // }
+    // test();
+    // var a;
+    /*
+    GO={
+      a:1,
+      test:test(){}
+    }
+    AO={
+      a:undefined
+    }
+    undefined 2 3
+    第一个undefined的原因是因为AO内部能查找到a，所以就不去GO查找了
+    */
+
+    // function test() {
+    //   console.log(b);
+    //   if (a) {
+    //     var b = 2;//预编译不管if，这里变量声明var b仍然提升
+    //   }
+
+    //   c = 3;
+    //   console.log(c);
+    // }
+
+    // var a;
+    // test();
+    // a = 1;
+    // console.log(a);
+
+    /*
+    GO={
+      a:1,
+      test:function test(){}
+    }
+    AO={
+      b:undefined
+    }
+    GO={
+      a:1,
+      test:function test(){}
+      c:3
+    }
+    undefined 3 1
+    */
+
+    // function test() {
+    //   a = 1;
+    //   function a() {
+
+    //   }
+    //   var a = 2;
+    //   return a;
+    // }
+    // console.log(test());
+    /*
+    1、
+    AO={
+      a=undefined
+    }
+    2、
+    AO={
+      a=function a(){}
+    }
+    3、
+    AO={
+      a=2
+    }
+    结果 2
+    */
+
+    // function test() {
+    //   return a;
+    //   a = 1;
+    //   function a() { }
+    //   var a = 2;
+    // }
+    // console.log(test());//function a(){}
+
+    // a = 1;
+    // function test(e) {
+    //   function e() { }
+    //   arguments[0] = 2;
+    //   console.log(e);
+    //   if (a) {
+    //     var b = 3
+    //   }
+    //   var c;
+    //   a = 4;
+    //   var a;
+    //   console.log(b);
+    //   f = 5;
+    //   console.log(c);
+    //   console.log(a);
+
+    // }
+    // var a;
+    // test(1);
+    /*
+    GO={
+      a:1,
+      test:function test(e){...}
+    }
+    AO={
+      e:1,->function e() { }
+      b:undefined,
+      c:undefined,
+      a:undefined,
+    }
+
+    function e() { } 错 应为2
+    3 错 应为undefined
+    undefined
+    4
+    */
+
+    // function test(e) {
+    //   function e() { }
+    //   arguments[0] = 2;
+    //   console.log(e);
+    // }
+    // test(8)
+    console.log(false + 1);
+    console.log(false == 1);
+    console.log(true == 1);
+    console.log(false == 0);
+    if (typeof (a) && (-true) + (+undefined) + '') {
+      console.log('通过');
+    } else {
+      console.log('未通过');
+    }
+    if (1 + 5 * '3' == 16) {
+      console.log('通过');
+    } else {
+      console.log('未通过');
+    }
+
+    console.log(!!' ' + !!'' - !!false || "未通过");
+  </script>
+
+
+</body>
+
+</html>

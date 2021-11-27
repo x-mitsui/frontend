@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    "use strict"
+
+
+    //继承是原型的继承
+    function User() {
+
+    }
+
+    User.prototype.show = function () {
+        console.log(this.description());
+
+    }
+
+
+
+
+    function Admin() {
+
+    }
+
+    Admin.prototype = Object.create(User.prototype);
+    Admin.prototype.description = function () {
+        return "我是admin"
+    };
+
+
+
+
+    Object.defineProperty(Admin.prototype, "contructor", {
+        value: Admin,
+        enumerable: false
+    })
+
+
+
+
+
+    function Member() {
+
+    }
+
+    Member.prototype = Object.create(User.prototype);
+
+    Member.prototype.description = function () {
+        return "我是member"
+    };
+
+
+    Object.defineProperty(Member.prototype, "contructor", {
+        value: Member,
+        enumerable: false
+    })
+
+
+
+
+
+    function Enterprise() {
+
+    }
+
+    Enterprise.prototype = Object.create(User.prototype);
+    Enterprise.prototype.description = function () {
+        return "我是enterprise"
+    };
+
+
+
+    Object.defineProperty(Enterprise.prototype, "contructor", {
+        value: Enterprise,
+        enumerable: false
+    })
+
+
+
+
+
+
+    for (const obj of [new Admin(), new Member(), new Enterprise()]) {
+        obj.show()
+    }
+
+
+
+
+
+
+
+</script>
+
+<body>
+
+
+</body>
+
+</html>

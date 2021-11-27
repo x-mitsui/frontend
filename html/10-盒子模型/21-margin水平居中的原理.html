@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box {
+      height: auto;
+      /* width: 500px; */
+      background-color: #f00;
+    }
+
+    .inner {
+      width: 150px;
+      height: 100px;
+      background-color: yellow;
+      /* auto:让浏览器把空间分配给指定auto的地方, */
+      margin-left: auto;
+      margin-right: auto;
+      /* 这种方式意义不大，后面会有更好的方式 */
+      margin-top: auto;
+      margin-bottom: auto;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="box">
+      <div class="inner"></div>
+    </div>
+
+
+  </div>
+
+
+
+</body>
+
+</html>

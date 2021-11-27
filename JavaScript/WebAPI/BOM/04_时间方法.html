@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+        }
+    </style>
+    <script type="text/javascript">
+        function fun1() {
+            console.log('fun1')
+        };
+        function fun2() {
+            console.log('fun2')
+        };
+        let time1 = setTimeout(fun1);
+        let time2 = window.setTimeout(fun2, 5000);
+        window.clearTimeout(time2);
+        let staffA = {
+            firstName: "Li",
+            lastName: "mei"
+        };
+        console.log(...staffA);
+
+    </script>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

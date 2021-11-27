@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  let module = (function () {
+    const moduleList = {}
+
+    function define(moduleName, modules, action) {
+      modules.map((m, i) => {
+        modules[i] = moduleList[m]
+      })
+      moduleList[moduleName] = action.apply(null, modules);
+      console.log(moduleList);
+
+    }
+    return { define }
+  })()
+  module.define("hd", [], function () {
+    return {
+      first(arr) {
+        return arr[0]
+      },
+      max(arr, key) {
+        return arr.sort((a, b) => b.key - a.key)[0]
+      }
+    }
+  })
+  module.define('lesson', ["hd"], function (hd) {
+    let data = [{ name: "js", price: 199 }, { name: "mysql", price: 78 }]
+
+    console.log(hd);
+    console.log(hd.max(data, 'price'));
+
+  })
+
+
+  //----------------
+
+  module.define('a', [], function () {
+    return {
+      site: "kk",
+      url: "kk.game.com",
+    }
+  })
+  module.define("b", ["a"], function (a) {
+    a.site = "really.com"
+  })
+  module.define("c", ["a"], function (a) {
+    console.log("a:" + a.site);
+
+  })
+  // module.define("c", ["hd", "a"], function (a) {
+  //   console.log("c:" + a.site);
+  //   console.log("c:" + a.max);
+
+  // })
+</script>
+
+</html>

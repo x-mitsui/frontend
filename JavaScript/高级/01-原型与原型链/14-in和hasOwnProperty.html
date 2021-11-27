@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let a = {
+
+            url: "www.ww..w",
+            show() {
+                console.log('aaa');
+
+            }
+        }
+        let b = {
+            name: "安康出",
+            put() {
+                console.log('bbb');
+            }
+        }
+
+        Object.prototype.web = "zz.z.zz.z."
+
+        console.log('web' in a);//in：如果自己没有就会查找隐式原型链
+
+
+        console.log(a.hasOwnProperty('url'));
+        console.log(a.hasOwnProperty('show'));
+
+        for (const k in b) {
+            if (Object.hasOwnProperty.call(b, k)) {
+                const ele = b[k];
+                console.log(b[k]);
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

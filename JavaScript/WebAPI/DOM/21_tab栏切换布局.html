@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .tabList li {
+    /* float: left; */
+    text-decoration: node;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: inline;
+  }
+
+  .tabContent>div {
+    display: none;
+  }
+
+  .color {
+    background-color: #f00;
+  }
+</style>
+
+<body>
+  <div class="tabList">
+    <ul>
+      <li class='color'>test01</li>
+      <li>test02</li>
+      <li>test03</li>
+      <li>test04</li>
+    </ul>
+  </div>
+  <div class="tabContent">
+    <div>show01</div>
+    <div>show02</div>
+    <div>show03</div>
+    <div>show04</div>
+  </div>
+  <script>
+    let lis = document.querySelector('ul').querySelectorAll('li');
+    let divs = document.querySelector('.tabContent').querySelectorAll('div');
+    lis.forEach((item, index) => {
+      item.onclick = function () {
+        setAllinline();
+        setAllnoColor();
+        this.setAttribute('class', 'color');
+        // divs[index].setAttribute('class', 'show')
+        divs[index].style.display = 'block'
+      }
+    })
+    function setAllinline() {
+      divs.forEach((item) => {
+        // item.class = 'hide';//没用，权重相对低，无法生效
+        item.style.display = 'none';//内联样式权重高
+      })
+    }
+    function setAllnoColor() {
+      lis.forEach((item) => {
+        item.removeAttribute('class');//或者item.className=''
+      })
+    }
+
+  </script>
+</body>
+
+</html>

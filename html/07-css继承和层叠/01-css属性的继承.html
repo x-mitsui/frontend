@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            color: red;
+            font-size: 44px;
+            font-weight: normal;
+            background-color: #313131;
+            width: 400px;
+            /* height: 200px; */
+        }
+
+        img {
+            width: 100%;
+            /* 强制继承父类 */
+            width:inherit
+        }
+    </style>
+</head>
+<body>
+    <!-- css中有些属性是可以继承的,何为属性的继承?
+        一个元素如果没有设置某属性的值,就会跟随父元素的值
+        当然,一个元素如果有设置某属性的值,就使用自己设置的值 
+        比如color、font-size等属性都是可以继承的
+        
+        如何观察某个属性是否可以继承,将光标放在标签上,当出现MDN时点击进入
+
+
+        -->
+
+        <!-- 借助开发工具中elements观察p元素 -->
+
+        <div class="box">
+            <p>哈哈哈哈</p>
+            <!-- 自己设置了font-weight -->
+            <div>
+                <strong>呵呵呵额</strong>
+            </div>
+            <img src="../exercise3/img/3.jpeg" alt="">
+        </div>
+</body>
+</html>

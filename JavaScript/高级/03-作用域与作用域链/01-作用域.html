@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 1、变量提升声明：
+        // 它是静态的，在编码时就确认了
+
+        // 2、分类
+        // 全局作用域
+        // 函数作用域
+        // 没有块作用域（ES6之前）
+
+        // 3、作用：隔离变量，不同作用域下同名变量不会有冲突
+        var a = 3;
+        function fn() {
+            console.log(a);
+            var a = 4;
+        }
+        fn()
+
+        console.log(b);
+        fn2()
+        fn3();//不能调用，这里遵循变量提升
+
+        var b = 3;
+        function fn2() {
+            console.log('fn2()')
+        }
+        var fn3 = function () {
+            
+        }
+
+
+        
+    </script>
+</body>
+</html>

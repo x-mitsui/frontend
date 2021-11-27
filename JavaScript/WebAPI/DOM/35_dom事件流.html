@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .parent {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: relative;
+  }
+
+  .son {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    /* margin: 0 auto; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+
+  }
+</style>
+
+<body>
+  <div class="parent">
+    <div class="son">son盒子</div>
+  </div>
+
+  <script>
+    //分为自document->html->body->div(father)->div(son)的捕获阶段，
+    //和div(son)->div(father)->body->html->document的冒泡阶段；
+    //JS代码只能执行冒泡或者捕获其中一个阶段!!!
+    //onclick和attachEvent只能得到冒泡阶段
+    //addEventListener(type,listener,[,useCapture])
+    //第三个参数为true，事件捕获阶段调用事件处理程序
+    //第三个参数为false或者省略，事件冒泡阶段调用事件处理程序
+    //事件冒泡有利有弊
+    //实际开发多以冒泡为主
+    //有些事件没有冒泡，比如onblur、onfocus、onmouseenter、onmouseleave
+    // let son = document.querySelector('.son');
+    // son.addEventListener('click', cal1, true)
+    // function cal1(params) {
+    //   alert('son')
+    // }
+    // let parent = document.querySelector('.parent');
+    // parent.addEventListener('click', cal2, true)
+    // function cal2(params) {
+    //   alert('parent')
+    // }
+
+    let son = document.querySelector('.son');
+    son.addEventListener('click', cal1, false)
+    function cal1() {
+      alert('son')
+    }
+    let parent = document.querySelector('.parent');
+    parent.addEventListener('click', cal2, false)
+    function cal2() {
+      alert('parent')
+    }
+
+    document.addEventListener('click', cal3, false)
+    function cal3() {
+      alert('document')
+    }
+
+
+  </script>
+</body>
+
+</html>

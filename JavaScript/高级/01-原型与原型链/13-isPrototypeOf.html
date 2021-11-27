@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        // 例1
+        //注意这个方法和instanceof的不同
+        //instanceof是判断构造函数的prototype
+        // let a = {}
+        // let b = {
+
+        // }
+
+        // console.log(b.__proto__ == Object.prototype);
+        // console.log(b.__proto__.isPrototypeOf(a));
+
+        // 例2
+        let a = {}
+        let b = {
+
+        }
+        let c = {
+
+        }
+        Object.setPrototypeOf(a, b)
+        Object.setPrototypeOf(b, c)
+
+        console.log(b.isPrototypeOf(a));
+        console.log(c.isPrototypeOf(b));
+        console.log(c.isPrototypeOf(a));
+        c.show = function () {
+            console.log('哈哈哈');
+
+        }
+        a.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

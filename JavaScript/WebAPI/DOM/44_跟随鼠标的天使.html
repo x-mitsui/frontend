@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  img {
+    position: absolute;
+  }
+</style>
+
+<body>
+
+  <img src="./res/08/0.jpeg" alt="">
+  <script>
+    //鼠标不断的移动，使用鼠标移动事件“mousemove
+    //在页面中移动，给document注册事件
+    //图片要移动距离，而且不占位置，我们使用绝对定位即可
+    let img = document.querySelector('img')
+    document.addEventListener('mousemove', function (e) {
+
+      // console.log('e.clientX:' + e.clientX);
+      // console.log('e.clientY:' + e.clientY);
+      //注意要加单位
+      img.style.left = e.clientX - 90 + 'px';
+      img.style.top = e.clientY - 90 + 'px';
+    })
+  </script>
+</body>
+
+</html>

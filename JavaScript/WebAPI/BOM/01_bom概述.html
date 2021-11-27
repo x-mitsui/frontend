@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            ECMAScript是JavaScript的核心，但如果要在web中使用JavaScript，那么BOM则无疑才是真正的核心。因为BOM提供了很多对象可以让JavaScript去操作浏览器。
+    
+            window对象
+              BOM的核心对象是window，它表示浏览器的一个实例。
+              在浏览器中，window对象有双重角色，
+              它既是通过JavaScript访问浏览器窗口的一个接口，
+              又是ECMAScript规定的Global对象。
+    
+            全局作用域
+              如果在全局环境中用var定义了对象、变量或函数都会被添加到window对象中。
+    
+            浏览器可以通过调用系统对话框，向用户显示信息。
+    
+            系统提供了三个函数，可以完成系统对话框的操作。
+    
+            window包含：document location navigation screen history
+            */
+
+        /*
+        【注】window下的函数
+        */
+        // window.alert("警告框");
+        // alert("警告框");//window可不写，因为它这个上下文都是window
+
+        // var res = confirm("请选择");
+        // alert(res);
+
+        // var res = prompt("请输入");
+        // alert(res);
+
+        function fn(params) {
+            console.log('11');
+
+        }
+        window.fn();
+        console.dir(window)
+        // console.log(window.p)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

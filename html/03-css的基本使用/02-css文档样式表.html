@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 写在header里，缺点：随着样式增多，篇幅增大，维护不方便，应该抽出 -->
+    <style>
+        /* 
+        选择器 {
+            属性名：属性值
+        }
+        
+         */
+        h1 {
+            color:red;
+            font-size: larger;
+        }
+
+        p {
+            color:blue;
+        }
+
+        /* 可多次使用 */
+        .purple {
+            color: purple;
+        }
+        /* 并集选择器，可以一次使用多个 */
+        a, div {
+            color:burlywood
+        }
+    </style>
+</head>
+<body>
+    <!-- 提取行内样式表，就引入了文档样式表 -->
+    <h1>
+        网页的主题
+    </h1>
+    <p>
+        网页的内容
+    </p>
+    <div>
+        上帝都会
+    </div>
+    <a href="www.baidu.com">百度</a>
+    <br/>
+    <span class="purple">类选择器</span>
+</body>
+</html>

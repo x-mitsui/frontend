@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 缺点：
+        // 函数执行完后，函数内的局部变量没有释放，占有内存时间会变长
+        // 容易造成内存泄露
+
+        // 解决：
+        // 能不用闭包就不用
+        // 及时释放
+
+        function f1() {
+            var arr = new Array[10000];
+            function f2() {
+                console.log(arr.length);
+                
+            }
+            return f2
+        }
+        var f1 = f1();
+        f();//不处理就会造成内存泄露
+        f=null;//让内部函数成为垃圾对象-->回收闭包
+    </script>
+</body>
+</html>

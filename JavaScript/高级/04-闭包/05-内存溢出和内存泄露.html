@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 溢出就是满了
+
+        // var obj = {}
+        // for (let index = 0; index < 10000; index++) {
+        //     obj[index] = new Array[10000000000];
+        // }
+
+        //内存泄露：占有的内存没有及时释放
+        // 泄露多了容易导致内存溢出
+
+        // 常见的内存泄露
+        // 意外的全局变量
+        function fn() {
+            a=new Array(1000000000)
+            console.log(a);
+            
+        }
+        fn()
+       
+        // 没有及时清理的计时器或回掉函数
+        var intervalId = setInterval(function () {
+            
+        },1000)
+        // clearInterval(intervalId)
+        // 闭包
+    </script>
+</body>
+</html>

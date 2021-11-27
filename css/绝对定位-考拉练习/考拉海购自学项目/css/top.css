@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* tabbar相关样式 */
+#top .tabbar {
+  height: 40px;
+  line-height: 40px;
+  background-color: #ff0;
+}
+
+#top .tabbar .category {
+  float: left;
+  width: 164px;
+  background: linear-gradient(90deg, #f00, #f84975);
+  color: #fff;
+  font-size: 14px;
+}
+#top .tabbar .list {
+  float: left;
+}
+#top .tabbar .list li {
+  float: left;
+}

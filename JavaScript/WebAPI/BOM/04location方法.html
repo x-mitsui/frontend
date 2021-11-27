@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+    </style>
+    <script type="text/javascript">
+    /*
+        location 我们浏览器的地址输入栏
+        提供了与当前窗口中加载的文档有关的信息，还提供了一些导航功能。
+
+        location中的属性
+
+        url 统一资源定位符 （快递包的一个地址）
+
+    */
+    window.onload=function(){
+            var obtn = document.getElementById("btn");
+            obtn.onclick=function(){
+                //跳转到指定的url
+                // location.assign("http://www.baidu.com");
+                // //重载当前的url
+                // location.reload("http://www.baidu.com");
+                // location.reload(true);//忽略缓存加载
+
+                //跳转到指定的url，可以避免跳转前的page
+                location.replace("http://www.baidu.com");
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" id = "btn"/>
+</body>
+</html>

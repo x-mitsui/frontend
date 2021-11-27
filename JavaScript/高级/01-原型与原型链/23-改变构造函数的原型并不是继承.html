@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    "use strict"
+
+    //继承是原型的继承而不是改变构造函数的原型，看下面，后台Member和前台Admin增加各自动作会彼此产生影响
+    function User() {
+
+    }
+
+    User.prototype.name = function () {
+        console.log('user name');
+
+    }
+    let hd = new User();
+    hd.name()
+
+    function Admin() {
+
+    }
+    Admin.prototype = User.prototype;
+    let a = new Admin();
+    Admin.prototype.role = function () {
+        console.log('后台会员分类');
+
+    }
+    a.name()
+
+
+
+
+    function Member() {
+
+    }
+    Member.prototype = User.prototype;
+    Member.prototype.role = function () {
+        console.log('前台会员分类');
+
+    }
+    let m = new Member();
+    m.role()
+    a.role()
+
+
+
+
+
+
+</script>
+
+<body>
+
+
+</body>
+
+</html>

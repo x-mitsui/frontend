@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            font-size: 50px;
+        }
+
+        .box2 {
+            font-size: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 50px -->
+    <div class="box1">
+        <!-- 继承后50*0.5px -->
+        <div class="box2">
+            <!-- css继承的是计算值,所以这里是继承是计算出的结果25px,而不是0.5em(25*0.5px) -->
+            <!-- 继承后25px -->
+            <p>哈哈哈</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .parent {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: relative;
+  }
+
+  .son {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    /* margin: 0 auto; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+  }
+</style>
+
+<body>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sequi explicabo quisquam facilis reiciendis ut esse
+    dolor corporis voluptate adipisci magnam, eligendi non vel facere. Vitae magni ipsa autem. Libero.</p>
+  <script>
+
+    //禁止鼠标右键菜单
+    //contextmenu主要控制应该何时显示上下文菜单，
+    //主要用于取消默认的上下文菜单
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    })
+    //禁止鼠标选中（selectstart 开始选中）
+    document.addEventListener('selectstart', function (e) {
+      e.preventDefault();
+    })
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    "use strict"
+
+    //继承是原型的继承
+    function User() {
+
+    }
+
+    User.prototype.name = function () {
+        console.log('user name');
+
+    }
+    let hd = new User();
+    hd.name()
+
+    function Admin() {
+
+    }
+    Admin.prototype.__proto__ = User.prototype;
+    let a = new Admin();
+    Admin.prototype.role = function () {
+        console.log('后台会员分类');
+
+    }
+    a.name()
+
+
+
+
+    function Member() {
+
+    }
+    //先产生一个对象，对象的__proto__指向User.prototype，然后Member.prototype等于这个对象的__proto__
+    //所以Member.prototype的指向经历了一次改变，所以此处添加方法要放在之后
+    Member.prototype = Object.create(User.prototype);
+    Member.prototype.role = function () {
+        console.log('前台会员分类');
+
+    }
+    let m = new Member();
+    m.role()
+    a.role()
+
+
+
+
+
+
+</script>
+
+<body>
+
+
+</body>
+
+</html>

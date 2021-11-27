@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .parent {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: relative;
+  }
+
+  .son {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    /* margin: 0 auto; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+
+  }
+</style>
+
+<body>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <script>
+    //不是给每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点
+    //给ul注册点击事件，然后利用事件对象的target来找到当前点击的li，因为点击li，事件会冒泡到ul上，
+    //ul有注册事件，就会触发事件监听器
+    //优点：只操作来一次dom，提高了程序的性能
+    let ul = document.querySelector('ul');
+    ul.addEventListener('click', cal1)
+    function cal1(e) {
+      alert('son')
+      //通过e.target获取点击的对象
+      e.target.style.backgroundColor = 'red'
+    }
+    let parent = document.querySelector('.parent');
+    parent.addEventListener('click', cal2)
+
+
+  </script>
+</body>
+
+</html>

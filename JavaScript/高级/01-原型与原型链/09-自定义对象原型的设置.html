@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let hd = { name: "hd" };
+        let parent = {
+            show() {
+                console.log("parent method:" + this.name);
+
+            }
+        };
+        // console.log(hd.__proto__ == Object.prototype);
+        ;
+        parent.name = 33;
+
+        console.log(hd.name);
+
+        Object.setPrototypeOf(hd, parent);
+        hd.show()//hd
+        console.log(hd.__proto__ == parent);//true
+        console.log(Object.getPrototypeOf(hd) == parent);
+        console.log(hd.__proto__ == parent.prototype);//false
+        console.log(hd.prototype);//undefined
+        console.log(parent.prototype);//undefined
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <ul>
+    <li>ppd</li>
+  </ul>
+
+  <script>
+
+    let li = document.createElement('li');
+    let ul = document.querySelector('ul');
+    ul.appendChild(li);
+    ul.appendChild(li);
+    ul.appendChild(li);
+    ul.appendChild(li);
+
+    let lili = document.createElement('li');
+    ul.insertBefore(lili, ul.children[0]);//在指定元素前插入
+  </script>
+</body>
+
+</html>

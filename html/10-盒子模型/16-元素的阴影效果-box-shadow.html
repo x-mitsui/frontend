@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* <shadow> = inset?&&<length>{2,4}&&<color>? */
+        /* ?代表0个或1个 */
+       /* 第一个length正数向右偏移 */
+       /* 第二个length正数向下偏移 */
+       /* 第三个lenth表示模糊半径 */
+       /* 第四个lenth表示向外延伸 */
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+
+            box-shadow: 5px 5px 5px;
+            box-shadow: 5px 5px 5px 5px;
+            box-shadow: 5px 5px 5px 5px orange;
+            box-shadow: inset 5px 5px 5px 5px orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

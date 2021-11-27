@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style type="text/css">
+    .green {
+        width:100px;height:100px;
+        background-color: green;
+        float:left
+    }
+    .red {
+        width:150px;height:200px;
+        background-color: red;
+    }
+    .a {
+        width: 200px;
+        background-color: green;
+    }
+    .b {
+        width: 500px;
+        background-color: red;
+    }
+    .c {
+        width: 300px;
+        background-color: blue;
+    }
+    .a,.b,.c {
+        float: left;height: 200px;
+    }
+    .hh {
+        height: 360px;background: black;
+    }
+    .outer {
+        clear: left;
+        /* overflow: auto; */
+    }
+</style>
+<body>
+    <p>
+        文字环绕效果
+    </p>
+    <div class="green">
+        
+    </div>
+    <div class="red">
+        文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕
+    </div>
+
+    <p>
+        横向排版布局
+    </p>
+    <div class="outer">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    
+
+    <div class="hh"></div>
+</body>
+</html>

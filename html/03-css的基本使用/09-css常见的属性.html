@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. color：前景色(不止文字的颜色) */
+        .box1 {
+            /* 它同样影响了下面几个属性 */
+            color: red;
+
+            text-decoration: line-through;
+
+            border-width: 5px;
+            border-style: solid;
+        }
+        /* 2. font-size：字体大小 */
+        .box2 {
+            font-size: 30px;
+        }
+        /* 3.background-color:背景颜色 */
+        .box3 {
+            background-color: gray;
+        }
+        .contrast {
+            background-color: skyblue;
+        }
+        /* 4.width和height */
+        .box4 {
+            background-color: orange;
+            width: 30px;
+            height: 30px;
+        }
+        /* 设置宽高无效 */
+        .title4 {
+            background-color: purple;
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- color：前景色 -->
+    <div class="box1">let me see!</div>
+    <!-- font-size：字体大小 -->
+    <div class="box2">you can see me!</div>
+    <!-- 3.background-color:背景颜色 -->
+    <div class="box3">don't see that！</div>
+    <span class="contrast">contrast of up</span>
+    <!-- 4.width和height -->
+    <div class="box4">hehehehe</div>
+    <!-- 设置宽高无效 -->
+    <span class="title4">see me where</span>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div>
+    <button id='btn'>切换</button>
+    <input type="text" id='input'>
+  </div>
+
+  <script>
+
+    let btn = document.getElementById('btn');
+    let input = document.getElementById('input');
+
+    //基本维护的数据
+    let flag = 1
+    btn.onclick = function () {
+      if (flag == 0) {
+        flag = 1
+        input.type = 'text'
+      } else {
+        flag = 0
+        input.type = 'password'
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
