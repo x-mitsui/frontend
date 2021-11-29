@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- div>h2+a+p>span -->
+  <div>
+    <h2></h2>
+    <a href=""></a>
+    <p><span></span></p>
+  </div>
+  <!-- div*5 -->
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <!-- div>p>span^h2+a    ^回到上一层级-->
+  <div>
+    <div>
+      <p><span></span></p>
+      <h2></h2>
+      <a href=""></a>
+    </div>
+  </div>
+
+  <div>
+    <p><span></span></p>
+    <h2></h2>
+    <a href=""></a>
+  </div>
+  <h2></h2>
+  <strong></strong>
+
+  <div>
+    <p><span></span></p>
+  </div>
+  <h1></h1>
+  <strong></strong>
+
+  <!-- div>p>span^^h1+strong -->
+
+
+  <div>
+    <p><span></span></p>
+  </div>
+  <h1></h1>
+  <strong></strong>
+
+  <!-- (div>(p>span))+h1+strong -->
+  <div>
+    <p><span></span></p>
+  </div>
+  <h1></h1>
+  <strong></strong>
+
+  <!-- div#main -->
+  <div id="main"></div>
+  <!-- div.box -->
+  <div class="box"></div>
+  <!-- div[title] -->
+  <div title=""></div>
+  <!-- div[title="哈哈哈"] -->
+  <div title="哈哈哈"></div>
+
+  <!-- 添加多个属性 -->
+  <!-- div#main.box1.box2[title="666"] -->
+  <div id="main" class="box1 box2" title="666"></div>
+
+  <!-- div{我是div元素} -->
+  <div>我是div元素</div>
+  <!-- div.box1{我是div元素} -->
+  <div class="box1">我是div元素</div>
+
+  <!-- 属性中有数字 div{我是div元素} -->
+  <!-- div.box1$*5 -->
+  <div class="box11"></div>
+  <div class="box12"></div>
+  <div class="box13"></div>
+  <div class="box14"></div>
+  <div class="box15"></div>
+
+  <!-- 内容中有数字 -->
+  <!-- div.p{内容$}*5 -->
+
+  <div class="box1">内容1</div>
+  <div class="box1">内容2</div>
+  <div class="box1">内容3</div>
+  <div class="box1">内容4</div>
+  <div class="box1">内容5</div>
+
+  <!-- div>p{sds$}*5 -->
+  <div>
+    <p>sds1</p>
+    <p>sds2</p>
+    <p>sds3</p>
+    <p>sds4</p>
+    <p>sds5</p>
+  </div>
+
+  <!-- .conte>.tes -->
+  <div class="conte">
+    <div class="tes"></div>
+  </div>
+
+  <!-- ul>li.item${列表元素$}*5 -->
+  <!-- ul>.item${列表元素$}*5 -->
+  <ul>
+    <li class="item1">列表元素1</li>
+    <li class="item2">列表元素2</li>
+    <li class="item3">列表元素3</li>
+    <li class="item4">列表元素4</li>
+    <li class="item5">列表元素5</li>
+  </ul>
+</body>
+
+</html>

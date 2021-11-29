@@ -10,8 +10,10 @@
             a:visit 访问的链接
             a:hover 光标挪动到链接上
             a:active 激活的链接(鼠标在链接上长按住未松开)
+      
             a:hover必须放在:link和:visit后面才完全生效
             a:active必须放在a:hover后面才完全生效
+      
             所以建议的顺序如下
             记忆:女朋友看到LV后,ha ha大笑
         } */
@@ -33,7 +35,7 @@
             color: red;
         } */
 
-        /* hover和active用在其它元素 */
+        /* hover和active也可以用在其它元素上 */
         strong:hover {
             color: orange;
         }
@@ -54,7 +56,7 @@
         /* 记忆:女朋友看到LV后,(feng)风一样的ha ha大笑 */
         
         /* 去掉a元素的聚焦状态 */
-        /* 第一种 */
+        /* 第一种，但实质上只是不显示，没有去掉 */
         a:focus{
             outline: none;
         }
