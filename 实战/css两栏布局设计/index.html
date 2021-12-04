@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      overflow-y: hidden;
+    }
+
+    .left {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 300px;
+      background-color: #f00;
+    }
+
+    .right {
+      height: 100%;
+      margin-left: 300px;
+      background-color: #0f0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 左侧固定，右侧随着浏览器水平变化而变化 -->
+  <div class="left"></div>
+  <div class="right"></div>
+
+</body>
+
+</html>
