@@ -1,0 +1,179 @@
+div {
+  background-color: red;
+}
+h1 {
+  background-color: red;
+}
+p {
+  color: #009900;
+}
+.little-panel {
+  border: 10px solid dodgerblue;
+  background-color: lightgreen;
+  margin: 3px;
+  font-size: 12px;
+  padding: 5px;
+}
+.big-panel {
+  border: 20px solid dodgerblue;
+  background-color: lightgreen;
+  margin: 13px;
+  font-size: 32px;
+  padding: 20px;
+}
+.super-panel {
+  border: 20px solid dodgerblue;
+  background-color: black;
+  margin: 13px;
+  font-size: 32px;
+  padding: 20px;
+}
+#side-nav {
+  background-color: #333;
+}
+#side-nav a:link {
+  color: #fff;
+  display: block;
+  padding: 8px;
+}
+#side-nav a:hover {
+  background-color: #777;
+}
+#welcome-banner {
+  font-size: 32px;
+  background-color: lightgreen;
+}
+@media screen and (max-width: 768px) {
+  #welcome-banner {
+    font-size: 18px;
+    background-color: lightsteelblue;
+  }
+}
+.button {
+  background-color: #006699;
+  color: #fff;
+  padding: 5px;
+  display: inline-block;
+}
+.jumbo-button {
+  background-color: #006699;
+  color: #fff;
+  padding: 5px;
+  display: inline-block;
+  padding: 35px;
+}
+.light-button {
+  background-color: #006699;
+  color: #fff;
+  padding: 5px;
+  display: inline-block;
+  background-color: #00b8ff;
+}
+#one {
+  height: 50px;
+  width: 80px;
+  margin-bottom: 10px;
+  background: url("../imgs/6.jpg");
+}
+#two {
+  height: 150px;
+  width: 280px;
+  margin-bottom: 10px;
+  background: url("../imgs/normal/0.jpg");
+}
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.box .box1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+}
+.triangle {
+  display: inline-block;
+  margin-top: 20px;
+}
+.triangle.top {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0 25px 50px 25px;
+  border-bottom-color: red;
+  border-left-color: rgba(255, 0, 0, 0);
+  border-right-color: rgba(255, 0, 0, 0);
+}
+.triangle.bottom {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 50px 25px 0 25px;
+  border-top-color: orange;
+  border-left-color: rgba(255, 165, 0, 0);
+  border-right-color: rgba(255, 165, 0, 0);
+}
+.triangle.left {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 25px 50px 25px 0;
+  border-right-color: lightgreen;
+  border-top-color: rgba(144, 238, 144, 0);
+  border-bottom-color: rgba(144, 238, 144, 0);
+}
+.triangle.right {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 40px 0 40px 80px;
+  border-left-color: blue;
+  border-top-color: rgba(0, 0, 255, 0);
+  border-bottom-color: rgba(0, 0, 255, 0);
+}
+.triangle.top-right {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0 80px 80px 0;
+  border-right-color: cyan;
+  border-bottom-color: rgba(0, 255, 255, 0);
+}
+.triangle.top-left {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 80px 80px 0 0;
+  border-top-color: #8d9191;
+  border-right-color: rgba(141, 145, 145, 0);
+}
+.triangle.bottom-right {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0 0 80px 80px;
+  border-bottom-color: #ae00ff;
+  border-left-color: rgba(174, 0, 255, 0);
+}
+.triangle.bottom-left {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 80px 0 0 80px;
+  border-left-color: #d6ab34;
+  border-top-color: rgba(214, 171, 52, 0);
+}

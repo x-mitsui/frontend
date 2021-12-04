@@ -1,0 +1,132 @@
+//变量
+@color: red;
+@font-color: #009900;
+
+div {
+  background-color: @color;
+}
+h1 {
+  background-color: @color;
+}
+p {
+  color: @font-color;
+}
+
+// mixin
+// 普通混合不带括号和参数，会输出到css中;而且可能会被认为选择器
+// 不带输出的混合
+
+.panel(@M,@Bw:20px,@c:lightgreen) {
+  border: @Bw solid dodgerblue;
+  background-color: @c;
+  margin: @M;
+}
+
+.little-panel {
+  .panel(3px,10px);
+  font-size: 12px;
+  padding: 5px;
+}
+.big-panel {
+  .panel(13px);
+  font-size: 32px;
+  padding: 20px;
+}
+.super-panel {
+  .panel(13px,@c:black);
+  font-size: 32px;
+  padding: 20px;
+}
+
+//嵌套
+#side-nav {
+  background-color: #333;
+  a:link {
+    color: #fff;
+    display: block;
+    padding: 8px;
+  }
+
+  a:hover {
+    background-color: #777;
+  }
+}
+
+// 嵌套条件语句
+#welcome-banner {
+  font-size: 32px;
+  background-color: lightgreen;
+  @media screen {
+    @media (max-width: 768px) {
+      font-size: 18px;
+      background-color: lightsteelblue;
+    }
+  }
+}
+// 数学运算
+@buttonBackground: #006699;
+@buttonColor: #fff;
+@buttonPadding: 5px;
+
+.button {
+  background-color: @buttonBackground;
+  color: @buttonColor;
+  padding: @buttonPadding;
+  display: inline-block;
+}
+.jumbo-button {
+  .button;
+  padding: @buttonPadding + 30;
+}
+
+.light-button {
+  .button;
+  background-color: @buttonBackground*1.8;
+}
+
+// 导入其它less
+
+@import "buttons";
+@import "forms";
+
+// 文件路径，统一设置
+@imgPath: "../imgs/";
+@imgNormalPath: "../imgs/normal/";
+
+#one {
+  height: 50px;
+  width: 80px;
+  margin-bottom: 10px;
+  background: url("@{imgPath}6.jpg");
+}
+#two {
+  height: 150px;
+  width: 280px;
+  margin-bottom: 10px;
+  background: url("@{imgNormalPath}0.jpg");
+}
+
+//练习
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+
+  .box1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #fff;
+  }
+}
+// 不编译
+// * {
+//   margin: 100px;
+//   padding: ~"calc(100px)";
+// }
+@import "triangleMixin";

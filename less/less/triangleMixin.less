@@ -1,0 +1,91 @@
+.triangle(@_, @w, @h, @c) {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-style: solid;
+}
+
+.triangle(top, @w, @h, @c) {
+  border-width: 0 (@w / 2) @h (@w / 2);
+  border-bottom-color: @c;
+  border-left-color: fade(@c, 0);
+  border-right-color: fade(@c, 0);
+}
+
+.triangle(bottom, @w, @h, @c) {
+  border-width: @h (@w / 2) 0 (@w / 2);
+  border-top-color: @c;
+  border-left-color: fade(@c, 0);
+  border-right-color: fade(@c, 0);
+}
+
+.triangle(left, @w, @h, @c) {
+  border-width: (@h / 2) @w (@w / 2) 0;
+  border-right-color: @c;
+  border-top-color: fade(@c, 0);
+  border-bottom-color: fade(@c, 0);
+}
+
+.triangle(right, @w, @h, @c) {
+  border-width: (@h / 2) 0 (@h / 2) @w;
+  border-left-color: @c;
+  border-top-color: fade(@c, 0);
+  border-bottom-color: fade(@c, 0);
+}
+
+.triangle(top-right, @w, @h, @c) {
+  border-width: 0 @h @w 0;
+  border-right-color: @c;
+  border-bottom-color: fade(@c, 0);
+}
+
+.triangle(top-left, @w, @h, @c) {
+  border-width: @h @w 0 0;
+  border-top-color: @c;
+  border-right-color: fade(@c, 0);
+}
+
+.triangle(bottom-right, @w, @h, @c) {
+  border-width: 0 0 @h @w;
+  border-bottom-color: @c;
+  border-left-color: fade(@c, 0);
+}
+
+.triangle(bottom-left, @w, @h, @c) {
+  border-width: @h 0 0 @w;
+  border-left-color: @c;
+  border-top-color: fade(@c, 0);
+}
+
+// triangles
+.triangle {
+  display: inline-block;
+  @width: 50px;
+  @height: 50px;
+  margin-top: 20px;
+  &.top {
+    .triangle(top,@width,@height,red);
+  }
+  &.bottom {
+    .triangle(bottom,@width,@height,orange);
+  }
+  &.left {
+    .triangle(left,@width,@height,lightgreen);
+  }
+  &.right {
+    .triangle(right,80px,80px,blue);
+  }
+  &.top-right {
+    .triangle(top-right,80px,80px,cyan);
+  }
+  &.top-left {
+    .triangle(top-left,80px,80px,rgb(141, 145, 145));
+  }
+
+  &.bottom-right {
+    .triangle(bottom-right,80px,80px,rgb(174, 0, 255));
+  }
+  &.bottom-left {
+    .triangle(bottom-left,80px,80px,rgb(214, 171, 52));
+  }
+}
