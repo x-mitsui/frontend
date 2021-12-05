@@ -1,0 +1,5 @@
+@import "./test.css";
+
+.bg-image {
+  background-image: url("../imgs/4.jpeg");
+}
