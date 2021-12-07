@@ -1,10 +1,52 @@
 @import "common.less";
 .main-nav-cover {
   .layer();
-  .main-nav {
-    height: 36px;
+  .main-nav-bd {
+    height: 30px;
     width: 1190px;
     background-color: #ff5555;
     margin: 0 auto;
+    .market {
+      float: left;
+      width: 190px;
+      background-color: #ff5000;
+      line-height: 30px;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+    }
+    .nav-list {
+      float: left;
+      &.main-nav-list {
+        .nav-link {
+          font-size: 16px;
+        }
+      }
+
+      li {
+        float: left;
+        height: 30px;
+        margin: 0 3px;
+        padding: 0 4px;
+        line-height: 30px;
+        color: white;
+        position: relative;
+        &.nav-item:hover::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 25px;
+          height: 14px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          top: -14px;
+          background: url(../img/cap.png) no-repeat 0 0/25px 14px;
+        }
+        .nav-link {
+          font-size: 14px;
+          color: white;
+        }
+      }
+    }
   }
 }

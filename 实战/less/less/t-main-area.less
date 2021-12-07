@@ -1,70 +1,151 @@
 .main-show-area {
   width: 1190px;
-  height: 552px;
+  height: 632px;
   margin: 0 auto;
-  .main-area {
-    width: 773px;
-    height: 526px;
+  .left-part {
+    height: 100%;
     float: left;
-    background-color: #f00;
-    .main-nav-menu {
-      width: 212px;
-      height: 522px;
-      background-color: #0f0;
-      float: left;
+    .main-area {
+      // background-color: #f00;
+      .main-nav-menu {
+        float: left;
+        width: 188px;
+        height: 522px;
+        border: 1px solid #ff5000;
+        // background-color: #0f0;
+        .menu-list {
+          height: 522px;
+          padding: 5px 0 3px;
+          box-sizing: border-box;
+          .menu-item {
+            height: 32px;
+            padding: 0 19px 0 25px;
+            font-size: 14px;
+            line-height: 32px;
+            color: #666;
+            position: relative;
+            &:hover {
+              background: #ffeee5;
+              color: #ff5000;
+              a,
+              .fa {
+                color: #ff5000;
+              }
+            }
+            .fa {
+              position: absolute;
+              right: 10px;
+              top: 9px;
+              color: #999;
+            }
+            .menu-link {
+              font-size: 14px;
+              color: #666;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .slider-cover {
+        float: left;
+        width: 520px;
+        height: 512px;
+        margin-top: 10px;
+        margin-left: 10px;
+        .main-slider {
+          position: relative;
+          width: 520px;
+          height: 280px;
+          background-color: #111;
+          .dir-icon {
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            top: 50%;
+            transform: translate(0, -50%);
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.6);
+            }
+            &.dir-forward {
+              right: 0px;
+              text-indent: 3px;
+              border-top-left-radius: 15px;
+              border-bottom-left-radius: 15px;
+            }
+            &.dir-backward {
+              left: 0px;
+              text-indent: -2px;
+              border-top-right-radius: 15px;
+              border-bottom-right-radius: 15px;
+            }
+          }
+          .main-slider-item {
+            height: 280px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .goods-slider {
+          position: relative;
+          width: 520px;
+          height: 230px;
+          background-color: #e00;
+        }
+      }
+      .hot-sales {
+        float: left;
+        width: 160px;
+        height: 512px;
+        margin-top: 10px;
+        margin-left: 10px;
+        background-color: #0f0;
+      }
     }
-    .slider-cover {
-      width: 520px;
-      height: 512px;
-      margin-top: 10px;
-      margin-left: 22px;
-      float: left;
-      background-color: silver;
-      .slider {
-        width: 520px;
-        height: 280px;
-        background-color: yellow;
-      }
-      .tmall {
-        width: 520px;
-        height: 232px;
-        background-color: #000;
-      }
+    .tb-headline {
+      width: 890px;
+      height: 100px;
+      // padding: 14px 14px 12px 20px;
+      // margin-right: 10px;
+      background-color: #000;
     }
   }
+
   .funcs-area {
-    width: 384px;
-    height: 508px;
+    width: 290px;
+    height: 622px;
     float: right;
-    background-color: #f0f;
+    background-color: #000;
     margin-top: 10px;
-    margin-right: 18px;
     .hello {
-      width: 384px;
       height: 71px;
       margin-top: 20px;
       background-color: #555;
     }
     .account-info {
-      width: 384px;
       height: 42px;
       margin-top: 11px;
       background-color: #f00;
     }
     .tip {
-      width: 356px;
       height: 141px;
       margin: 16px auto 0;
       background-color: #00f;
     }
     .notice {
-      width: 370px;
       height: 100px;
       margin: 17px auto auto 14px;
       background-color: #ff0;
     }
     .mytao {
-      width: 372px;
       height: 53px;
       margin: 20px auto auto 12px;
       background-color: #0f0;

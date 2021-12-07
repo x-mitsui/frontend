@@ -36,6 +36,15 @@ ul,
 li {
   box-sizing: border-box;
 }
+input,
+button {
+  border: none;
+  outline: none;
+}
+input:hover,
+button:hover {
+  cursor: pointer;
+}
 @font-face {
   font-family: "global-iconfont";
   src: url("//at.alicdn.com/t/font_1404888168_2057645.eot");

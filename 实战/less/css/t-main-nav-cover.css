@@ -48,7 +48,10 @@ button:hover {
 @font-face {
   font-family: "global-iconfont";
   src: url("//at.alicdn.com/t/font_1404888168_2057645.eot");
-  src: url("//at.alicdn.com/t/font_1404888168_2057645.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1404888168_2057645.woff") format("woff"), url("//at.alicdn.com/t/font_1404888168_2057645.ttf") format("truetype"), url("//at.alicdn.com/t/font_1404888168_2057645.svg#uxiconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_1404888168_2057645.eot?#iefix") format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_1404888168_2057645.woff") format("woff"),
+    url("//at.alicdn.com/t/font_1404888168_2057645.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_1404888168_2057645.svg#uxiconfont") format("svg");
 }
 body {
   background-color: #f4f4f4;
@@ -62,9 +65,37 @@ body {
   width: 100%;
   min-width: 1190px;
 }
-.main-nav-cover .main-nav {
-  height: 36px;
+.main-nav-cover .main-nav-bd {
+  height: 30px;
   width: 1190px;
   background-color: #ff5555;
   margin: 0 auto;
+}
+.main-nav-cover .main-nav-bd .market {
+  float: left;
+  width: 190px;
+  background-color: #ff5000;
+  line-height: 30px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+.main-nav-cover .main-nav-bd .nav-list {
+  float: left;
+}
+.main-nav-cover .main-nav-bd .nav-list li {
+  float: left;
+  height: 100%;
+  margin: 0 3px;
+  padding: 0 4px;
+  line-height: 30px;
+}
+.main-nav-cover .main-nav-bd .nav-list li .nav-link {
+  color: white;
+}
+.main-nav-cover .main-nav-bd .nav-list li .nav-link:hover {
+  cursor: pointer;
+}
+.main-nav-cover .main-nav-bd .nav-list .main-nav-list {
+  font-size: 16px;
 }
