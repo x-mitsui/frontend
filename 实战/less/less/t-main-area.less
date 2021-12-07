@@ -60,7 +60,13 @@
           width: 520px;
           height: 280px;
           background-color: #111;
+          &:hover {
+            .dir-icon {
+              display: block;
+            }
+          }
           .dir-icon {
+            display: none;
             width: 20px;
             height: 30px;
             background-color: rgba(0, 0, 0, 0.4);
@@ -87,6 +93,32 @@
               border-bottom-right-radius: 15px;
             }
           }
+          .indicator {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 73px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 6.5px;
+            // .wrap {
+            // margin-right: -2px;
+            .indicator-dot {
+              float: left;
+              margin: 1.5px 2.3px;
+              width: 10px;
+              height: 10px;
+              box-sizing: border-box;
+              background-color: #fff;
+              border: 2px solid #fff;
+              border-radius: 50%;
+            }
+            .indicator-dot.cur {
+              background-color: #ff5000;
+            }
+            // }
+          }
           .main-slider-item {
             height: 280px;
             img {
@@ -99,6 +131,10 @@
           width: 520px;
           height: 230px;
           background-color: #e00;
+          x {
+            height: 32px;
+            padding-top: 11px;
+          }
         }
       }
       .hot-sales {
