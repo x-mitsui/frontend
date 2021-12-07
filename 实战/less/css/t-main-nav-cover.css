@@ -1,0 +1,70 @@
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+div,
+ul,
+li {
+  box-sizing: border-box;
+}
+input,
+button {
+  border: none;
+  outline: none;
+}
+input:hover,
+button:hover {
+  cursor: pointer;
+}
+@font-face {
+  font-family: "global-iconfont";
+  src: url("//at.alicdn.com/t/font_1404888168_2057645.eot");
+  src: url("//at.alicdn.com/t/font_1404888168_2057645.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1404888168_2057645.woff") format("woff"), url("//at.alicdn.com/t/font_1404888168_2057645.ttf") format("truetype"), url("//at.alicdn.com/t/font_1404888168_2057645.svg#uxiconfont") format("svg");
+}
+body {
+  background-color: #f4f4f4;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.main-nav-cover {
+  width: 100%;
+  min-width: 1190px;
+}
+.main-nav-cover .main-nav {
+  height: 36px;
+  width: 1190px;
+  background-color: #ff5555;
+  margin: 0 auto;
+}

@@ -1,0 +1,73 @@
+.main-show-area {
+  width: 1190px;
+  height: 552px;
+  margin: 0 auto;
+}
+.main-show-area .main-area {
+  width: 773px;
+  height: 526px;
+  float: left;
+  background-color: #f00;
+}
+.main-show-area .main-area .main-nav-menu {
+  width: 212px;
+  height: 522px;
+  background-color: #0f0;
+  float: left;
+}
+.main-show-area .main-area .slider-cover {
+  width: 520px;
+  height: 512px;
+  margin-top: 10px;
+  margin-left: 22px;
+  float: left;
+  background-color: silver;
+}
+.main-show-area .main-area .slider-cover .slider {
+  width: 520px;
+  height: 280px;
+  background-color: yellow;
+}
+.main-show-area .main-area .slider-cover .tmall {
+  width: 520px;
+  height: 232px;
+  background-color: #000;
+}
+.main-show-area .funcs-area {
+  width: 384px;
+  height: 508px;
+  float: right;
+  background-color: #f0f;
+  margin-top: 10px;
+  margin-right: 18px;
+}
+.main-show-area .funcs-area .hello {
+  width: 384px;
+  height: 71px;
+  margin-top: 20px;
+  background-color: #555;
+}
+.main-show-area .funcs-area .account-info {
+  width: 384px;
+  height: 42px;
+  margin-top: 11px;
+  background-color: #f00;
+}
+.main-show-area .funcs-area .tip {
+  width: 356px;
+  height: 141px;
+  margin: 16px auto 0;
+  background-color: #00f;
+}
+.main-show-area .funcs-area .notice {
+  width: 370px;
+  height: 100px;
+  margin: 17px auto auto 14px;
+  background-color: #ff0;
+}
+.main-show-area .funcs-area .mytao {
+  width: 372px;
+  height: 53px;
+  margin: 20px auto auto 12px;
+  background-color: #0f0;
+}
