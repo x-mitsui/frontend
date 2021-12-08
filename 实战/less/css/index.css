@@ -611,6 +611,7 @@ body {
   width: 890px;
   height: 100px;
   padding: 14px 14px 12px 20px;
+  margin-top: 10px;
   margin-right: 10px;
   background-color: #fff;
 }
@@ -766,7 +767,6 @@ body {
 .main-show-area .funcs-area .tb-tip {
   width: 290px;
   height: 26px;
-  margin: 16px auto 0;
   position: relative;
 }
 .main-show-area .funcs-area .tb-tip a {
@@ -907,4 +907,65 @@ body {
 }
 .main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-hcp {
   background-position: 0 -484px;
+}
+.main-show-area .funcs-area .tb-apps {
+  height: 111px;
+  background-color: #fff;
+  padding-top: 1px;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap {
+  height: 110px;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap h3 {
+  height: 30px;
+  padding-left: 14px;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap h3 a {
+  color: #3c3c3c;
+  font-size: 12px;
+  float: right;
+  font-weight: normal;
+  margin-right: 15px;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap .app-list {
+  padding-left: 23px;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap .app-list .app-item {
+  width: 32px;
+  height: 32px;
+  margin: 0 21px 8px 0;
+  float: left;
+  position: relative;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap .app-list .app-item:hover .app-qr {
+  display: block;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap .app-list .app-item .app-icon {
+  width: 100%;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap .app-list .app-item .app-qr {
+  display: none;
+  position: absolute;
+  width: 90px;
+  height: 102px;
+  top: -112px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap .app-list .app-item .app-qr img {
+  display: block;
+  width: 66px;
+  height: 66px;
+  margin: 12px auto 0;
+}
+.main-show-area .funcs-area .tb-apps .tb-app-wrap .app-list .app-item .app-qr p {
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
 }

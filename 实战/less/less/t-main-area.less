@@ -271,6 +271,7 @@
     width: 890px;
     height: 100px;
     padding: 14px 14px 12px 20px;
+    margin-top: 10px;
     margin-right: 10px;
     background-color: #fff;
     .headline-logo-wrap {
@@ -431,7 +432,7 @@
     .tb-tip {
       width: 290px;
       height: 26px;
-      margin: 16px auto 0;
+      // margin: 16px auto 0;
       position: relative;
 
       a {
@@ -576,6 +577,69 @@
             }
             &.icon-hcp {
               background-position: 0 -484px;
+            }
+          }
+        }
+      }
+    }
+    .tb-apps {
+      height: 111px;
+      background-color: #fff;
+      padding-top: 1px;
+      .tb-app-wrap {
+        height: 110px;
+        h3 {
+          height: 30px;
+          padding-left: 14px;
+          color: #000;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 30px;
+          a {
+            color: #3c3c3c;
+            font-size: 12px;
+            float: right;
+            font-weight: normal;
+            margin-right: 15px;
+          }
+        }
+        .app-list {
+          padding-left: 23px;
+          .app-item {
+            width: 32px;
+            height: 32px;
+            margin: 0 21px 8px 0;
+            float: left;
+            position: relative;
+            &:hover {
+              .app-qr {
+                display: block;
+              }
+            }
+            .app-icon {
+              width: 100%;
+            }
+            .app-qr {
+              display: none;
+              position: absolute;
+              width: 90px;
+              height: 102px;
+              top: -112px;
+              left: 50%;
+              transform: translate(-50%, 0);
+              border: 1px solid #ddd;
+              background-color: #fff;
+              img {
+                display: block;
+                width: 66px;
+                height: 66px;
+                margin: 12px auto 0;
+              }
+              p {
+                font-size: 12px;
+                line-height: 24px;
+                text-align: center;
+              }
             }
           }
         }
