@@ -1,3 +1,4 @@
+@import "common.less";
 .t-main-cover {
   .layer();
   height: 121px;
@@ -50,7 +51,9 @@
             font-weight: bold;
             text-align: center;
             line-height: 22px;
+            color: @tb-color;
             &.active {
+              color: #fff;
               background-color: @tb-color;
               border-top-left-radius: 6px;
               border-top-right-radius: 6px;
@@ -119,7 +122,7 @@
       .search-ft {
         height: 25px;
         line-height: 25px;
-        background-color: #fff;
+        // background-color: #fff;
         .ft-link {
           font-size: 12px;
           margin-right: 3px;

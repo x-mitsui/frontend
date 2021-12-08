@@ -68,3 +68,23 @@ body {
 .active {
   color: #ff5000;
 }
+.life-study {
+  width: 100%;
+  min-width: 1190px;
+  height: 166px;
+  margin-top: 10px auto 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+.life-study .life-study-title {
+  height: 24px;
+  margin: 19px 0 20px;
+  background-color: #ddd;
+  overflow: hidden;
+}
+.life-study .life-study-title .title-img {
+  width: 95px;
+  height: 0;
+  padding-top: 24px;
+  background: url("../img/life_study/title.png") no-repeat 0 0/90px 24px;
+}
