@@ -45,6 +45,10 @@ input:hover,
 button:hover {
   cursor: pointer;
 }
+em,
+i {
+  font-style: normal;
+}
 @font-face {
   font-family: "global-iconfont";
   src: url("//at.alicdn.com/t/font_1404888168_2057645.eot");

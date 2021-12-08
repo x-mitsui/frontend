@@ -1,3 +1,6 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
 blockquote,
 body,
 button,
@@ -61,6 +64,9 @@ body {
   content: "";
   clear: both;
   display: block;
+}
+.active {
+  color: #ff5000;
 }
 .t-nav-cover {
   width: 100%;
@@ -672,31 +678,233 @@ body {
   width: 290px;
   height: 622px;
   float: right;
-  background-color: #000;
   margin-top: 10px;
 }
-.main-show-area .funcs-area .hello {
-  height: 71px;
-  margin-top: 20px;
-  background-color: #555;
+.main-show-area .funcs-area .tb-member {
+  height: 145px;
+  width: 290px;
+  background: url("../img/user-bg.png") no-repeat 0 0/290px 145px;
 }
-.main-show-area .funcs-area .account-info {
-  height: 42px;
-  margin-top: 11px;
-  background-color: #f00;
+.main-show-area .funcs-area .tb-member .member-wrap {
+  padding: 3px 0 10px 0;
+  height: 100%;
 }
-.main-show-area .funcs-area .tip {
-  height: 141px;
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd {
+  height: 91px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-avatar {
+  width: 74px;
+  height: 56px;
+  margin: 0 auto;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-avatar .user-link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: url("/img/user.jpg") no-repeat 0 0/50px 50px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-nick {
+  display: block;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  font-size: 12px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-event {
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-event a {
+  display: inline-block;
+  padding-right: 10px;
+  background-color: #ffe4db;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #ff5000;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-event a .tb-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icons_sprites.png) no-repeat 0 0/24px 597px;
+  vertical-align: -2px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-event a .tb-icon.icon-tjb {
+  background-position: 0 -572.5px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-bd .member-event a .tb-icon.icon-club {
+  background-position: 0 -528px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-ft {
+  padding: 8px 0 0 15px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-ft .btn-wrap {
+  height: 100%;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-ft .btn-wrap .tb-btn {
+  display: block;
+  float: left;
+  height: 25px;
+  background-color: #ff5000;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 7px;
+  font-size: 14px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-ft .btn-wrap .tb-btn.btn-login {
+  width: 92px;
+}
+.main-show-area .funcs-area .tb-member .member-wrap .member-ft .btn-wrap .tb-btn.btn-reg {
+  width: 75px;
+}
+.main-show-area .funcs-area .tb-tip {
+  width: 290px;
+  height: 26px;
   margin: 16px auto 0;
-  background-color: #00f;
+  position: relative;
 }
-.main-show-area .funcs-area .notice {
-  height: 100px;
-  margin: 17px auto auto 14px;
-  background-color: #ff0;
+.main-show-area .funcs-area .tb-tip a {
+  display: block;
+  height: 100%;
+  background-color: #ffe4dd;
+  color: #f40;
+  line-height: 26px;
+  font-size: 12px;
+  text-align: center;
 }
-.main-show-area .funcs-area .mytao {
-  height: 53px;
-  margin: 20px auto auto 12px;
-  background-color: #0f0;
+.main-show-area .funcs-area .tb-tip .fa {
+  position: absolute;
+  right: 55px;
+  top: 4.5px;
+  color: #f40;
+}
+.main-show-area .funcs-area .tb-notice {
+  height: 108px;
+  padding-top: 10px;
+  background-color: #fff;
+}
+.main-show-area .funcs-area .tb-notice .notice-tab-list {
+  width: 292px;
+  height: 24px;
+  padding: 0 9px;
+  margin: 4px -2px 0 0;
+}
+.main-show-area .funcs-area .tb-notice .notice-tab-list .tab-item {
+  float: left;
+  width: 32px;
+  height: 22px;
+  margin: 0 11px;
+  border-bottom: 2px solid transparent;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+.main-show-area .funcs-area .tb-notice .notice-tab-list .tab-item.active a {
+  border-bottom: 2px solid #f40;
+  font-weight: bold;
+}
+.main-show-area .funcs-area .tb-notice .notice-tab-list .tab-item a {
+  color: #3c3c3c;
+}
+.main-show-area .funcs-area .tb-notice .notice-tab-list .tab-item a:hover {
+  color: #ff5000;
+}
+.main-show-area .funcs-area .tb-notice .notice-bd {
+  height: 65px;
+}
+.main-show-area .funcs-area .tb-notice .notice-bd .notice-list {
+  height: 65px;
+  padding: 9px 0 6px;
+}
+.main-show-area .funcs-area .tb-notice .notice-bd .notice-list .notice-item {
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  margin-right: 8px;
+}
+.main-show-area .funcs-area .tb-notice .notice-bd .notice-list .notice-item a {
+  font-size: 12px;
+}
+.main-show-area .funcs-area .tb-notice .notice-bd .notice-list .notice-item a:hover {
+  color: #f40;
+}
+.main-show-area .funcs-area .funcs-table {
+  height: 232px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list {
+  margin-right: -3px;
+  border-top: 1px solid #f3f3f3;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item {
+  box-sizing: border-box;
+  width: 74px;
+  height: 78px;
+  border: 1px solid #f3f3f3;
+  float: left;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item a {
+  display: block;
+  height: 64px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item a p {
+  font-size: 12px;
+  color: #3c3c3c;
+  text-align: center;
+  line-height: 40px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item a:hover p {
+  color: #f40;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 11px auto 0;
+  background: url("../img/icons_sprites.png") no-repeat 0 0/24px 597px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-chf {
+  background-position: 0 0;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-lx {
+  background-position: 0 -85px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-cx {
+  background-position: 0 -44px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-yx {
+  background-position: 0 -132px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-cp {
+  background-position: 0 -176px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-dy {
+  background-position: 0 -220px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-jd {
+  background-position: 0 -264px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-lc {
+  background-position: 0 -308px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-zcw {
+  background-position: 0 -352px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-yc {
+  background-position: 0 -396px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-sdm {
+  background-position: 0 -440px;
+}
+.main-show-area .funcs-area .funcs-table .funcs-list .funcs-item .funcs-icon.icon-hcp {
+  background-position: 0 -484px;
 }

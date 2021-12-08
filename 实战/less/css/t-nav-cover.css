@@ -1,3 +1,6 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
 blockquote,
 body,
 button,
@@ -61,6 +64,9 @@ body {
   content: "";
   clear: both;
   display: block;
+}
+.active {
+  color: #ff5000;
 }
 .t-nav-cover {
   width: 100%;
