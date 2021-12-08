@@ -606,7 +606,67 @@ body {
   height: 100px;
   padding: 14px 14px 12px 20px;
   margin-right: 10px;
-  background-color: #000;
+  background-color: #fff;
+}
+.main-show-area .tb-headline .headline-logo-wrap {
+  float: left;
+  width: 180px;
+  height: 73px;
+  position: relative;
+  left: 5px;
+  top: 14px;
+}
+.main-show-area .tb-headline .headline-logo-wrap .headline-logo {
+  width: 129px;
+  height: 0;
+  padding-top: 26px;
+  background: url(../img/headline.png) no-repeat 0 0/129px 26px;
+  overflow: hidden;
+}
+.main-show-area .tb-headline .headline-logo-wrap p {
+  font-size: 12px;
+  color: #999;
+  line-height: 24px;
+}
+.main-show-area .tb-headline .headline-bd {
+  float: left;
+  width: 676px;
+  height: 73px;
+  position: relative;
+}
+.main-show-area .tb-headline .headline-bd .headline-more {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-size: 12px;
+  color: #999;
+}
+.main-show-area .tb-headline .headline-bd .headline-more:hover {
+  color: #ff5000;
+}
+.main-show-area .tb-headline .headline-bd img {
+  float: left;
+  width: 130px;
+  height: 73px;
+  margin-right: 16px;
+}
+.main-show-area .tb-headline .headline-bd h4 {
+  display: inline-block;
+  margin-top: 2px;
+  line-height: 28px;
+  color: #333;
+}
+.main-show-area .tb-headline .headline-bd h4:hover {
+  color: #ff5000;
+}
+.main-show-area .tb-headline .headline-bd p {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+  height: 36px;
+  overflow: hidden;
 }
 .main-show-area .funcs-area {
   width: 290px;
