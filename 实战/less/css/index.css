@@ -1045,3 +1045,57 @@ body {
 .life-study .goods-list .good-item .good-info .other-info .amount {
   margin-left: 0.5em;
 }
+.site-positioning {
+  position: fixed;
+  top: 468px;
+  left: 50%;
+  z-index: 999;
+  width: 50px;
+  height: 350px;
+  position: relative;
+  margin-left: 605px;
+}
+.site-positioning .site-inner {
+  height: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.site-positioning .icon-wangwang {
+  width: 50px;
+  height: 12px;
+  top: -14px;
+  position: absolute;
+  background: url(../img/wangwang.png) no-repeat 0 0/50px 12px;
+}
+.site-positioning .positioning-block {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  padding: 10px 8px 0;
+  font-size: 13px;
+  color: #3c3c3c;
+  text-align: center;
+  line-height: 16px;
+  position: relative;
+}
+.site-positioning .positioning-block.on,
+.site-positioning .positioning-block:hover {
+  background-color: #ff5000;
+  color: #fff;
+  font-weight: bold;
+}
+.site-positioning .positioning-block::after {
+  position: absolute;
+  bottom: -1px;
+  left: 8px;
+  content: "";
+  width: 34px;
+  height: 0;
+  border-bottom: 1px solid #efefef;
+}
+.site-positioning .positioning-block.center span {
+  position: relative;
+  top: 8px;
+}
