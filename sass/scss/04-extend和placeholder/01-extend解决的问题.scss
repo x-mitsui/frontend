@@ -1,0 +1,24 @@
+@mixin transform($deg: 20deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+}
+// 普通mixin会造成冗余，最佳实践其实是box1,box2,box3{...}
+.box1 {
+  @include transform(45deg);
+}
+.box2 {
+  @include transform();
+}
+.box3 {
+  @include transform(30deg);
+}
+// extend解决了这个问题
+.box4 {
+  @extend .box1;
+}
+.box5 {
+  @extend .box1;
+}

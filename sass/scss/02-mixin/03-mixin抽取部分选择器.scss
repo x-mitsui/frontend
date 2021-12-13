@@ -1,0 +1,9 @@
+@mixin btn-bg-color($btnClass, $bgColor) {
+  .btn-#{$btnClass} {
+    background-color: $bgColor;
+  }
+}
+
+@include btn-bg-color("success", #5cb85c);
+@include btn-bg-color("warning", #f0ad4c);
+@include btn-bg-color("error", #f00);

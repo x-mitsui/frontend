@@ -1,0 +1,38 @@
+$sidebarWidth: 60px;
+$contentWidth: 200px;
+
+.container {
+  width: $sidebarWidth + $contentWidth;
+}
+
+.box {
+  // 不同单位不能相加
+  width: 10px+60px;
+}
+
+// 注意css的‘/’另有含义
+// font: font-size/line-height
+.box1 {
+  font: 20px/1.5;
+}
+
+// 如果需要除法可以加括号，加其它运算符，用变量
+.box2 {
+  font: (20px)/1.5;
+}
+.box3 {
+  width: 20px * 2 / 2 - 20px;
+}
+$var: 30px;
+.box4 {
+  width: $var / 2;
+}
+
+.box5 {
+  color: #112233 + #332211;
+}
+
+p::before {
+  content: "Foo " + bar;
+  font-family: san + "serif";
+}

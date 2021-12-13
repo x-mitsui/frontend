@@ -1,0 +1,11 @@
+.div {
+  width: 100px;
+  height: 100px;
+}
+.div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*# sourceMappingURL=02-%E9%80%89%E6%8B%A9%E5%99%A8%E5%B5%8C%E5%A5%97.css.map */

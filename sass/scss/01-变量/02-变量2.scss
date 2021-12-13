@@ -1,0 +1,11 @@
+$color: yellowgreen;
+.box1 {
+  color: $color;
+  .inner-box1 {
+    $color: red;
+    color: $color;
+  }
+  .inner-box2 {
+    color: $color;
+  }
+}

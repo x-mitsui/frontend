@@ -1,0 +1,11 @@
+$textType: "large";
+span {
+  // 判断条件对于条件的类型敏感
+  @if $textType== "large" {
+    font-size: 40px;
+  } @else if($textType== "middle") {
+    font-size: 20px;
+  } @else {
+    font-size: 10px;
+  }
+}

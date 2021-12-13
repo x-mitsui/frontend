@@ -1,0 +1,9 @@
+@mixin set-value($direction) {
+  margin-#{$direction}: 10px;
+  padding-#{$direction}: 5px;
+}
+
+.wrap {
+  @include set-value(top);
+  @include set-value(bottom);
+}

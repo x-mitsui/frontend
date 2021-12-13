@@ -1,0 +1,33 @@
+.box1 {
+  -webkit-box-shadow: -5px 0 5px orange;
+  -moz-box-shadow: -5px 0 5px orange;
+  -o-box-shadow: -5px 0 5px orange;
+  -ms-box-shadow: -5px 0 5px orange;
+  box-shadow: -5px 0 5px orange;
+}
+
+.box2 {
+  -webkit-box-shadow: -5px 0 5px orange, 5px 0 5px red;
+  -moz-box-shadow: -5px 0 5px orange, 5px 0 5px red;
+  -o-box-shadow: -5px 0 5px orange, 5px 0 5px red;
+  -ms-box-shadow: -5px 0 5px orange, 5px 0 5px red;
+  box-shadow: -5px 0 5px orange, 5px 0 5px red;
+}
+
+.box3 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.box4 {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+/*# sourceMappingURL=01-mixin%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95.css.map */

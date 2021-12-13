@@ -1,0 +1,8 @@
+.box {
+  // 局部变量
+  $color: blue;
+  color: $color;
+  .inner-box {
+    color: $color;
+  }
+}

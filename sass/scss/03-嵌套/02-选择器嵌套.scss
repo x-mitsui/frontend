@@ -1,0 +1,9 @@
+.div {
+  width: 100px;
+  height: 100px;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

@@ -1,0 +1,55 @@
+.dog-icon {
+  background-image: url(/imgs/dog.png);
+}
+
+.cat-icon {
+  background-image: url(/imgs/cat.png);
+}
+
+.elephant-icon {
+  background-image: url(/imgs/elephant.png);
+}
+
+.dog-icon {
+  background-image: url(/imgs/dog.png);
+}
+
+.cat-icon {
+  background-image: url(/imgs/cat.png);
+}
+
+.elephant-icon {
+  background-image: url(/imgs/elephant.png);
+}
+
+.rocket-icon {
+  background-image: url(/imgs/animal.png);
+  border: 1px solid white;
+  cursor: default;
+}
+
+.car-icon {
+  background-image: url(/imgs/animal.png);
+  border: 1px solid brown;
+  cursor: pointer;
+}
+
+.train-icon {
+  background-image: url(/imgs/animal.png);
+  border: 1px solid yellow;
+  cursor: move;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/*# sourceMappingURL=03-%E9%81%8D%E5%8E%86@each.css.map */

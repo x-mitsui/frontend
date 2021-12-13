@@ -1,0 +1,15 @@
+// 公共样式不会出现在最终的css中
+// %box也不会和其它选择器混用
+%box {
+  width: 100px;
+  height: 100px;
+}
+
+.box-1 {
+  @extend %box;
+}
+
+.box-2 {
+  @extend %box;
+  background-color: blue;
+}

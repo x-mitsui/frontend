@@ -1,0 +1,12 @@
+// 注意scss是从上到下执行
+$color: blue;
+.box {
+  color: $color;
+  .inner-box1 {
+    $color: red !global;
+    color: $color;
+  }
+  .inner-box2 {
+    color: $color;
+  }
+}

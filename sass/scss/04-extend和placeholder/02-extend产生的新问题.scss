@@ -1,0 +1,35 @@
+// 问题一：公共样式也会解析到css中
+.common-box-style {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+}
+
+.box1 {
+  @extend .common-box-style;
+}
+.box2 {
+  @extend .common-box-style;
+}
+
+// 问题二：inner-box a继承了凡是和.button相关的样式
+// 协作时，盲目继承会出现问题
+.button {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.middle.button {
+  background-color: #f0f;
+}
+
+.bottom.button {
+  margin: 0 20px;
+  color: #fff;
+}
+
+.inner-box a {
+  @extend .button;
+}

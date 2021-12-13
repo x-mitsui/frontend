@@ -1,0 +1,9 @@
+$lightColor: #ddd #eee;
+$darkColor: #333 #666;
+
+.box {
+  background-color: nth($lightColor, 2);
+  &:hover {
+    background-color: nth($darkColor, 1);
+  }
+}

@@ -1,0 +1,28 @@
+$list: dog, cat, elephant;
+@each $animal in $list {
+  .#{$animal}-icon {
+    background-image: url(/imgs/#{$animal}.png);
+  }
+}
+@each $animal in (dog, cat, elephant) {
+  .#{$animal}-icon {
+    background-image: url(/imgs/#{$animal}.png);
+  }
+}
+// 多重一次遍历
+@each $animal, $color, $cursor in (rocket, white, default), (car, brown, pointer),
+  (train, yellow, move)
+{
+  .#{$animal}-icon {
+    background-image: url(/imgs/#{animal}.png);
+    border: 1px solid $color;
+    cursor: $cursor;
+  }
+}
+
+// 键值对形式
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+  #{$header} {
+    font-size: $size;
+  }
+} ;

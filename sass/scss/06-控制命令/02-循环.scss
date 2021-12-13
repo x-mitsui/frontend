@@ -1,0 +1,19 @@
+@for $i from 1 through 3 {
+  .item#{$i} {
+    width: 5px * $i;
+  }
+}
+
+@for $i from 1 to 3 {
+  .box#{$i} {
+    height: 100px * $i;
+  }
+}
+
+$i: 12;
+@while $i>0 {
+  .item-#{$i} {
+    width: 5px * $i;
+  }
+  $i: ($i) - 1;
+}

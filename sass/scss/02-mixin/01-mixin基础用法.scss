@@ -1,0 +1,28 @@
+// 多参数时，可以后缀'...'
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+// 也可以去掉括号，也可以设置默认参数
+@mixin transform($deg: 20deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+}
+.box1 {
+  @include box-shadow(-5px 0 5px orange);
+}
+.box2 {
+  @include box-shadow(-5px 0 5px orange, 5px 0 5px red);
+}
+.box3 {
+  @include transform(45deg);
+}
+.box4 {
+  @include transform();
+}

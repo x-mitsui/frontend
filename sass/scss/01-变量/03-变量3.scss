@@ -1,0 +1,13 @@
+.box {
+  // 局部变量
+  $color: blue;
+  color: $color;
+  .inner-box1 {
+    $color: red;
+    color: $color;
+  }
+  .inner-box2 {
+    // 使用的是局部变量
+    color: $color;
+  }
+}

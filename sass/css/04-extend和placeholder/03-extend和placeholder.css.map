@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,cAAK;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;;;AAOf,MAAO;EAEL,gBAAgB,EAAE,IAAI",
+"sources": ["../../scss/04-extend%E5%92%8Cplaceholder/03-extend%E5%92%8Cplaceholder.scss"],
+"names": [],
+"file": "03-extend%E5%92%8Cplaceholder.css"
+}

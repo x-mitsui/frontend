@@ -1,0 +1,23 @@
+.common-box-style, .box1, .box2 {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+}
+
+.button, .inner-box a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.middle.button, .inner-box a.middle {
+  background-color: #f0f;
+}
+
+.bottom.button, .inner-box a.bottom {
+  margin: 0 20px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=02-extend%E4%BA%A7%E7%94%9F%E7%9A%84%E6%96%B0%E9%97%AE%E9%A2%98.css.map */
