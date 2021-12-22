@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <p>全名：{{name}}</p>
+    <h2>{{score}}分：{{level}}</h2>
+    <button @click="score+=10">成绩增长</button>
+    <button @click="changeName">改名</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          message: 0,
+          firstName: "Lebron",
+          lastName: "James",
+          score: 50
+        }
+      },
+      methods: {
+        changeName: function () {
+          this.name = "Kobe Bryant"
+        }
+      },
+
+      computed: {
+        // 同样也不要使用箭头函数
+        // 相当于getter
+        level() {
+          if (this.score >= 60 && this.score < 80) {
+            return "及格"
+          } else if (this.score < 60) {
+            return "不及格"
+          } else {
+            return "优秀"
+          }
+        },
+        name: {
+          // getter setter
+          get() {
+            return this.firstName + " " + this.lastName;
+          },
+          set(newValue) {
+            console.log(newValue)
+            const names = newValue.split(" ");
+            [this.firstName, this.lastName] = names;
+          }
+        },
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

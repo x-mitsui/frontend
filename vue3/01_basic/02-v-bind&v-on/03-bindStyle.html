@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <!-- 注意此处绑定的是对象，非原始样式，所以不用分号，注意小驼峰，原值添加分号 -->
+    <!-- 当然方法、计算属性也可以 -->
+    <div class="box" :style="{color:'red',fontSize:'30px','background-color':bgColor,width:'100px',height:height+'px'}">
+    </div>
+    <div :style="styleObj"></div>
+    <!-- 数组语法，多对象合并 -->
+    <div :style="[styleObj,styleObj2]"></div>
+
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          bgColor: "rgb(300,0,0)",
+          height: 100,
+          styleObj: {
+            color: 'green',
+            fontSize: '30px',
+            'background-color': "lightblue",
+            width: '50px',
+            height: '50px'
+          },
+          styleObj2: {
+            color: 'blue',
+            fontSize: '20px',
+            'background-color': "yellowgreen",
+            width: '100px',
+            height: '100px'
+          }
+        }
+      },
+      methods: {
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

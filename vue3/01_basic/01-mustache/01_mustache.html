@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #f00;
+    }
+
+    button.toggle {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- mustache内取值 -->
+  <!-- 直取变量 -->
+  <!-- 表达式，三元运算 -->
+  <!-- 函数、computed -->
+
+  <template id='my-app'>
+    <p>当前值：{{value}}</p>
+    <p>{{message.split("").join("-")}}</p>
+    <p>{{getReverse()}}</p>
+    <div class="box" v-show="isShow"></div>
+    <button @click="add()">增加</button>
+    <button @click="sub()">减少</button>
+    <button @click="toggle()" class='toggle'>{{isShow?"隐藏红色box":"显示红色box"}}</button>
+
+    <!-- 错误用法 -->
+    <!-- <h2>{{var name='123'}}</h2> -->
+    <!-- <h2>if(isShow) age=3;</h2> -->
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          value: 0,
+          message: "HelloWorld",
+          isShow: false
+        }
+      },
+      methods: {
+        add() {
+          this.value++;
+        },
+        sub() {
+          this.value--;
+        },
+        getReverse() {
+          return this.message.split('').reverse().join("");
+        },
+        toggle() {
+          this.isShow = !this.isShow;
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

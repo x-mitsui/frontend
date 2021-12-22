@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <ul>
+      <template v-for='item,index of obj'>
+        <li>{{item.name}}</li>
+        <li>{{item.age}}</li>
+        <li>{{item.height}}</li>
+        <li class='line'></li>
+      </template>
+    </ul>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          obj: [{
+            name: "张三",
+            age: 17,
+            height: 1.88
+          },
+          {
+            name: "李四",
+            age: 12,
+            height: 1.28
+          },
+          {
+            name: "赵武",
+            age: 11,
+            height: 1.28
+          }]
+        }
+      },
+      methods: {
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

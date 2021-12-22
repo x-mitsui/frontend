@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #f00;
+    }
+
+    .green {
+      background-color: lightgreen;
+    }
+
+    button.toggle {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- v-on缩写@ -->
+
+  <template id='my-app'>
+    <p>当前值：{{value}}</p>
+    <div class="box" @mouseover="mouseover"></div>
+    <button @click="sub">减少</button>
+    <!-- 多参数需要手动传入$event -->
+    <button @click="transmit($event,'info')">传递事件</button>
+    <button @click="add()">增加</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          value: 0,
+          message: "HelloWorld",
+          isShow: false
+        }
+      },
+      methods: {
+        add(event) {
+          this.value++;
+          console.log(event);
+        },
+        sub(event) {
+          this.value--;
+          console.log(event);
+        },
+        transmit(evt, info) {
+          console.log(evt);
+          console.log(info);
+          var div = document.createElement("div");
+          div.innerHTML = info
+          document.body.appendChild(div)
+        },
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

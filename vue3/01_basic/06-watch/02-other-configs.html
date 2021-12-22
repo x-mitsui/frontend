@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    {{info.company.name}}
+    <button @click="changeInfo">改变info</button>
+    <button @click="changeInfoName">改变infoName</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          info: {
+            name: "战兽", age: 18, company: {
+              name: 'NBA'
+            }
+          }
+        }
+      },
+      watch: {
+        // 默认情况下，watch只会监听数据本身的改变，不能监听内部
+        // info(newValue, oldValue) {
+        //   console.log("普通监听", newValue, oldValue);
+        // },
+        // 监听内部
+        info: {
+          handler(newValue, oldValue) {
+            console.log("获取不到引用内部原来的值，没有对引用值做深拷贝", oldValue.company.name)
+            console.log("深度监听newValue：", newValue, "oldValue", oldValue)
+            console.log("name值：", newValue.company.name, oldValue.company.name)
+          },
+          // 深度监听
+          deep: true,
+          // 在初始化时就立即执行
+          // immediate: true
+        }
+      },
+      methods: {
+        changeInfo() {
+          this.info = {
+            name: "James Hardon", age: 35, company: {
+              name: "CBA"
+            }
+          }
+        },
+        changeInfoName() {
+          this.info.company.name = "WNBA"
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

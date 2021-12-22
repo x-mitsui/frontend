@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <h2 v-if="isShow">rocket</h2>
+    <h2 v-else>car</h2>
+
+
+    <button @click='toggle'>toggle</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          isShow: false
+        }
+      },
+      methods: {
+        toggle() {
+          this.isShow = !this.isShow;
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

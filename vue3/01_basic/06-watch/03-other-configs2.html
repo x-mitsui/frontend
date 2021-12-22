@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    {{info.company.name}}
+    <div>friends[0].name{{friends[0].name}}</div>
+
+    <button @click="changeInfoName">改变infoName</button>
+    <button @click="changeFriends0name">friends[0].name</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          info: {
+            name: "战兽", age: 18, company: {
+              name: 'NBA'
+            }
+          },
+          friends: [{ name: "张三" }, { name: '李四' }]
+        }
+      },
+      watch: {
+
+        // 监听内部
+        'info.company.name': function (newValue, oldValue) {
+
+          console.log("单独监听某一属性-newValue：", newValue, "oldValue", oldValue)
+          // console.log("name值：", newValue.company.name, oldValue.company.name)
+
+
+        },
+        // 不支持写法，建议将对象各子集分流到子组件内去监听
+        "friends[0].name": function (newValue, oldValue) {
+          console.log("单独监听某一属性-newValue：", newValue, "oldValue", oldValue)
+        }
+      },
+      methods: {
+        changeInfo() {
+          this.info = {
+            name: "James Hardon", age: 35, company: {
+              name: "CBA"
+            }
+          }
+        },
+        changeInfoName() {
+          this.info.company.name = "WNBA"
+        },
+        changeFriends0name() {
+          this.friends[0].name = "咕咕咕"
+        }
+      },
+      created() {
+        this.$watch("info", (newValue, oldValue) => {
+          // 也会遇到浅拷贝问题
+          console.log(newValue.company.name, oldValue.company.name)
+        }, {
+          deep: true
+        })
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

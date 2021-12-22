@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <h1 v-if="books.length==0">购物车为空</h1>
+    <template v-else>
+      <table>
+        <thead>
+          <tr>
+            <th class='t-index'>产品号</th>
+            <th class='t-title'>书籍名称</th>
+            <th class='t-publish'>出版日期</th>
+            <th class='t-price'>价格</th>
+            <th class='t-count'>购买数量</th>
+            <th class='t-operate'>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for='(book,index) of books' :key='book.id'>
+            <td>{{book.id}}</td>
+            <td><span>{{book.title}}</span></td>
+            <td>{{book.publishDate}}</td>
+            <td>￥{{totalPrice(book)}}</td>
+            <td><button :disabled='book.count<=1'
+                @click='sub($event,book.id)'>-</button>&nbsp;{{book.count}}&nbsp;<button
+                @click='add($event,book.id)'>+</button></td>
+            <td><button @click='remove(book.id)'>移除</button></td>
+          </tr>
+        </tbody>
+
+      </table>
+      <div class='footer'>
+        <h2>总计：￥{{allPrice()}}</h2>
+      </div>
+    </template>
+
+
+  </template>
+  <div id="app">
+
+  </div>
+  <script src='./index.js'>
+
+  </script>
+</body>
+
+</html>

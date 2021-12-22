@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <p>当前值：{{message}}</p>
+    <!-- 默认情况下，传递给data的值为字符串，数字也会转换为字符串，加上number修饰限定，数字就会按数字传递 -->
+    <input type="text" v-model.number='message'>
+    <button @click='showType'>显示类型</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          message: 0,
+
+        }
+      },
+      methods: {
+        showType() {
+          console.log("buttonshow", this.message, typeof this.message)
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

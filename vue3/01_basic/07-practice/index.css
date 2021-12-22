@@ -1,0 +1,61 @@
+table,
+tr,
+th,
+td {
+  border: 1px solid #999;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t-index {
+  width: 51px;
+}
+
+.t-title {
+  width: 200px;
+}
+
+td:nth-child(1) {
+  text-align: center;
+}
+
+td:nth-child(2) {
+  text-align: center;
+}
+
+td:nth-child(2) span {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+}
+
+td:nth-child(3) {
+  text-align: start;
+  text-indent: 20px;
+}
+
+.t-publish {
+  width: 100px;
+}
+
+.t-price {
+  width: 70px;
+}
+
+.t-count {
+  width: 100px;
+}
+
+.t-operate {
+  width: 60px;
+}
+
+.footer {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  float: right;
+}

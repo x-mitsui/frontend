@@ -1,0 +1,7 @@
+.image-bg {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  background-size: contain;
+  background-image: url("../imgs/n.jpg");
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <h2>喜欢的水果：{{fruit}}</h2>
+    <!--  可以设置multiple size='2' -->
+    <select name="" id="" v-model='fruit'>
+      <option value="apple">苹果</option>
+      <option value="orange">橘子</option>
+      <option value="banana">香蕉</option>
+    </select>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          // select默认值和此处设置的值相对应
+          fruit: 'orange'
+        }
+      },
+      methods: {
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

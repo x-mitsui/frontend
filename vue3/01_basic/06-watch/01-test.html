@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    你的问题：<input type="text" v-model="question">
+    <button @click='queryAnswer'>查找答案</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    /**
+     * 如果在【代码逻辑】中监听某个数据的变化时，需要借助监听器watch来实现
+     * 一般不监听计算属性
+     * 如果在界面中变化就不需要使用监听器了
+     */
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          question: '',
+          answer: ""
+        }
+      },
+      watch: {
+        // 监听question属性的变化，进行一些JavaScript逻辑的处理
+        question(newValue, oldValue) {
+          console.log(newValue, oldValue)
+        }
+      },
+      methods: {
+        // 
+        queryAnswer() {
+          console.log(`你的问题${this.question}的答案是${this.answer}`);
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

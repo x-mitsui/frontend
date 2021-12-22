@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <com-a></com-a>
+    <com-a></com-a>
+    <com-b></com-b>
+    <com-c></com-c>
+    <!-- <ComC></ComC> 不允许这种方式使用 -->
+  </template>
+  <template id='com-b'>
+    <h2>hh</h2>
+    <h2>{{msg}}</h2>
+  </template>
+  <template id='com-c'>
+    <h2>zz</h2>
+
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          message: ''
+        }
+      },
+      methods: {
+      }
+    });
+    app.component('com-a', {
+      template: `<div>nice</div>`
+    })
+    app.component('com-b', {
+      template: "#com-b",
+      data() {
+        return {
+          msg: "good"
+        }
+      }
+    })
+    // 命名也可以使用大驼峰的方式，使用的时候用驼峰或分隔符都可以
+    app.component('ComC', {
+      template: "#com-c",
+      data() {
+        return {
+          msg: "good"
+        }
+      }
+    })
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

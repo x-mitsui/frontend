@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <h2>前端语言</h2>
+    <ul>
+      <li v-for='(item, index) in movies'>{{index+1}}.&nbsp;{{item}}</li>
+    </ul>
+
+    <h2>后端语言</h2>
+    <ul>
+      <li v-for='(item,key) in obj'>{{key}}{{item}}</li>
+    </ul>
+
+    <h2>也可以使用of</h2>
+    <ul>
+      <li v-for='(item,key) of obj'>{{key}}{{item}}</li>
+    </ul>
+
+    <h2>遍历数字</h2>
+    <ul>
+      <li v-for='num in 5'>{{num}}</li>
+    </ul>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          movies: [
+            'javascript',
+            'css',
+            'html',
+            'vue',
+            'react'
+          ],
+          obj: {
+            "1-": "java",
+            "2-": "php",
+            "3-": "python",
+          }
+        }
+      },
+      methods: {
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

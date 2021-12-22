@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <div v-html='msg()'></div>
+    <div v-pre>就按花括号展示{{value}}</div>
+    <div v-text="123">相当于mustache语法</div>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          value: 0
+        }
+      },
+      methods: {
+        msg() {
+          return `<div style="color = red; background: lightgreen;">记得加括号</div>`
+        },
+
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

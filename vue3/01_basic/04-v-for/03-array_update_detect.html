@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <h2>前端语言</h2>
+    <ul>
+      <li v-for='(item, index) in languages'>{{index+1}}.&nbsp;{{item}}</li>
+    </ul>
+    <input type="text" v-model='newLanguage'>
+    <button @click='add' :disabled='newLanguage==""'>添加语言</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          // vue将被监听的数组的变更方法进行了包裹，所以它们也将会触发视图更新
+          // push pop shift unshift splice sort reverse等，这些都是会改变原始数组的方法，其它数组的纯函数方法也可以尝试一下
+          // 某些方法不会修改原来的数组，而是生成新数组，比如filter，concat，slice等方法，这样就得将原数组赋值为新数组
+          languages: [
+            'javascript',
+            'css',
+            'html',
+            'vue',
+          ],
+          newLanguage: ""
+        }
+      },
+      methods: {
+        add() {
+          this.languages.push(this.newLanguage);
+          // this.languages.fill('a', 2, 4)
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

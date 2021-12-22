@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <button @click='firstName="Curry"'>修改firstname</button>
+    <p>计算属性{{name}}</p>
+    <p>计算属性{{name}}</p>
+    <p>计算属性{{name}}</p>
+    <p>methods：{{getName()}}</p>
+    <p>methods：{{getName()}}</p>
+    <p>methods{{getName()}}</p>
+
+
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          message: 0,
+          firstName: "Lebron",
+          lastName: "James",
+          score: 50
+        }
+      },
+      methods: {
+        getName() {
+          // 打印3次
+          console.log("methods---->")
+          return this.firstName + " " + this.lastName;
+        }
+      },
+      // 计算属性相对于methods的优势是多次使用有缓存,而且更优雅;
+      // 点击按钮可以看出，computed不会影响响应式
+      computed: {
+        name() {
+          // 打印1次
+          console.log("computed---->")
+          return this.firstName + " " + this.lastName;
+        },
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+  <style>
+    div.active {
+      color: red;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #080;
+    }
+
+    .box2 {
+      width: 50px;
+      height: 50px;
+      background-color: #010;
+    }
+
+    .box3 {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(177, 185, 177);
+    }
+
+    .box4 {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(34, 219, 34);
+    }
+  </style>
+</head>
+
+<body>
+  <template id='my-app'>
+    <!-- :class最终绑定的值，要么是字符串，要么是data属性，要么是method或者computed，-->
+    <!-- 如果想要是字符串必须加引号  -->
+    <div class="box" :class='isActive? `active`:""'>你好呀</div>
+    <div class="box2" :class='{active:isActive,title:true}'>你好呀</div>
+    <div class="box3" :class='classObj'>你好呀</div>
+    <div class="box4" :class='classObj'>你好呀</div>
+    <div class="box5" :class='["123",X]'>你好呀</div>
+
+    <button @click="isActive=!isActive">切换字体颜色</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          isActive: false,
+
+          classObj: { active: true, title: true },
+          X: 'ggg'
+        }
+      },
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <template id='my-app'>
+    <input type="text" v-model='score'>
+
+    <!-- v-if是惰性的，当条件为false时，完全不会【渲染】或者【被销毁】 -->
+    <!-- 当条件为true时，才会真正渲染条件块中内容 -->
+    <h2 v-if="score>90">优秀</h2>
+    <h2 v-else-if="score <= 90 && score > 60">良好</h2>
+    <h2 v-else>不及格</h2>
+
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          score: 0
+        }
+      },
+      methods: {
+
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

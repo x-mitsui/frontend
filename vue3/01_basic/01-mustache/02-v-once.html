@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.26/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+  <!-- v-once用于指定元素或组件只渲染一次 -->
+  <!-- 当数据发生变化时，元素或者组件以及其所有子元素将视为静态内容并跳过 -->
+  <!-- 该指令用于性能优化 -->
+  <template id='my-app'>
+    <p>当前值：{{value}}</p>
+    <p v-once>当前值：{{value}}</p>
+    <div v-once>
+      <p>当前值：{{value}}</p>
+    </div>
+    <button @click="add()">增加</button>
+    <button @click="sub()">减少</button>
+  </template>
+  <div id="app">
+
+  </div>
+  <script>
+    const app = Vue.createApp({
+      template: "#my-app",
+      data() {
+        return {
+          value: 0
+        }
+      },
+      methods: {
+        add() {
+          this.value++;
+        },
+        sub() {
+          this.value--;
+        }
+      }
+    });
+    app.mount("#app");
+  </script>
+</body>
+
+</html>
