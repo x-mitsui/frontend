@@ -12,7 +12,7 @@ export function render(template, state) {
   return template;
 }
 
-// 更新
+// 数据改变导致视图更新
 export function update(statesPool, key, value) {
   const allEls = document.querySelectorAll("*");
   console.log("sh");
