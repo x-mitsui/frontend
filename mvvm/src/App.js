@@ -5,15 +5,23 @@ function App() {
   const state = useReactive({
     count: 0,
     name: "Mike",
+    friend: {
+      name: "李四",
+    },
   });
+  // console.log(state.friend); // 测试用例0001：如果friend是对象，拿回的是它的代理
+  // console.log(state.name); // 测试用例0002
   const add = function (num) {
     state.count += num;
+    console.log(state.count);
   };
   const minus = function (num) {
     state.count -= num;
+    console.log(state.count);
   };
   const changeName = function (name) {
     state.name = name;
+    console.log(state.name);
   };
   return {
     // View层
