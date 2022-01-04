@@ -13,21 +13,21 @@ function App() {
   // console.log(state.name); // 测试用例0002
   const add = function (num) {
     state.count += num;
-    console.log(state.count);
+    // console.log(state.count);
   };
   const minus = function (num) {
     state.count -= num;
-    console.log(state.count);
+    // console.log(state.count);
   };
   const changeName = function (name) {
     state.name = name;
-    console.log(state.name);
+    // console.log(state.name);
   };
   return {
     // View层
     template: `
       <h1>{{count}}</h1>
-      <h1>{{name}}</h1>
+      <h2>{{name}}</h2>
       <button onClick='add(2)'>+</button>
       <button onClick='minus(1)'>-</button>
       <button onClick='changeName("Jack")'>Change Name</button>

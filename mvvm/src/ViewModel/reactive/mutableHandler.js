@@ -1,15 +1,19 @@
 import { useReactive } from "./index.js";
 import { isEqual, isKeyExists, isObject } from "../../shared/utils.js";
+import { update } from "../render.js";
+import { statesPool } from "../compiler/state.js";
 
 const set = setter;
 const get = getter;
 function setter(target, key, newValue, receiver) {
+  const oldValue = target[key]; //设置之前保存一份
   const isSuccess = Reflect.set(target, key, newValue, receiver);
   // set分为两种情况：一种是新增，一种是更改
   if (!isKeyExists(target, key)) {
     console.log("新增属性");
-  } else if (!isEqual(target[key], newValue)) {
+  } else if (!isEqual(oldValue, newValue)) {
     console.log("修改属性");
+    update(statesPool, key, newValue);
   }
   return isSuccess;
 }
