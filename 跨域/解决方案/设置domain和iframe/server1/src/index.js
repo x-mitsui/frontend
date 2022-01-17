@@ -2,7 +2,9 @@ const express = require("express");
 const { readFileSync } = require("fs");
 const { resolve } = require("path");
 const app = express();
-
+app.get("/test", function (req, res) {
+  res.sendFile(resolve(__dirname, "../html/index.html"));
+});
 app.get("/getTeachers", (req, res) => {
   const teacherData = JSON.parse(
     readFileSync(resolve(__dirname, "../data/teachers.json"), "utf-8")

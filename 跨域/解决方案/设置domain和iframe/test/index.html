@@ -12,7 +12,22 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
   "></script>
   <script type="text/javascript">
-    $.get('http://localhost:8080/getTeachers', function (data) {
+    document.domain = "127.0.0.1"
+    var iframe = document.createElement("iframe");
+    // iframe.style.display = "none";//可隐藏可显示，按需而定
+    iframe.src = "http://127.0.0.1:8080/test/";
+    document.body.appendChild(iframe);
+
+    iframe.onload = function () {
+      window.$$ = iframe.contentWindow.$;
+      $$.get('http://127.0.0.1:8080/getTeachers', function (data) {
+        console.log(`%c---------分割线-----------`, "color:red")
+        console.log(JSON.stringify(data));
+        console.log("%c---------分割线-----------", "color:red")
+      })
+    }
+    // 非同源，所以跨域报错，此访问目的是做对照
+    $.get('http://127.0.0.1:8080/getTeachers', function (data) {
       console.log(data);
     })
   </script>
