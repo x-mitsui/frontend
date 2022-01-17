@@ -26,7 +26,11 @@
 
 实现此跨域方式主要两点：
 
-1. 以本工程为例，测试文档和 iframe 内文档要设置相同 domain
+1. 以本工程为例，测试文档和 iframe 内文档要设置相同 domain，不设置会报跨域错误。
+
+- 设置 domain 错误会报：
+  Failed to set the 'domain' property on 'Document': '127.0.0.11' is not a suffix of '127.0.0.1'
+
 2. 通过 iframe 内部 ajax 函数来访问同源接口，以免跨域。
 
 [详细了解文档第二种方式](https://www.yuque.com/x-mitsui/rgyn98/irap09#uJLRG)

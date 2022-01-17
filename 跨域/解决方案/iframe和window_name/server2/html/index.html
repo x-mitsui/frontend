@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h2>起始页的html</h2>
+  <script type="text/javascript">
+
+    window.name = "————A————"
+
+    const iframe = document.createElement("iframe");
+    iframe.src = "http://127.0.0.1:8081/test"
+    // iframe.style.display = "none";//为了观察现象，这里不隐藏了
+    let flag = false;
+    iframe.onload = function () {
+      if (flag) {
+        const data = iframe.contentWindow.name;
+        console.log("获取到的data为：", data)
+        // 这里提一下，父子页面window的name是不同的，当然此跨域方式和它没关系。
+        console.log("window.name", window.name);
+      } else {
+        flag = true;
+        setTimeout(() => {
+          iframe.contentWindow.location = "http://127.0.0.1:8082/test2"
+        }, 500)
+      }
+    }
+    document.body.appendChild(iframe);
+
+  </script>
+
+</body>
+
+</html>
