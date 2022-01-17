@@ -10,6 +10,7 @@
 4. 服务器 server1 逻辑业务代码，为 html 文件提供数据 api
 5. 服务器文件配置
 6. 非同源 html 文件
+
    ![结构图片](./other/structure.png)
 
 # 如何使用
