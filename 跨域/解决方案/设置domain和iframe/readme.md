@@ -21,7 +21,7 @@
 > yarn install<br>
 > yarn dev
 
-然后在vscode下右键 test 文件夹下网页 index.html，点击Open with Live Server。
+然后打开 test 文件夹下网页 index.html
 
 打开网页后开启控制台，就可以看到效果。
 
