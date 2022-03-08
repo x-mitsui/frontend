@@ -1,0 +1,33 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* width: 750px;
+  height: 1334px; */
+  background-color: aquamarine;
+}
+.container .list {
+  display: flex;
+}
+.container .list li:nth-child(1),
+.container .list li:nth-child(3) {
+  width: 50px;
+
+  background-color: #f00;
+}
+
+.container .list li:nth-child(2) {
+  flex: 1;
+  background-color: rgb(38, 0, 255);
+  color: aliceblue;
+}
+
+.container .list li.common {
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
