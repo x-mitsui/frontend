@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="https://unpkg.zhimg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.zhimg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.zhimg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor() {
+        super()
+        this.state = {
+          products: ["衣服", "裤子", "鞋"]
+        }
+      }
+      render() {
+        return (
+          <div>
+            <ul>
+              {this.state.products.map((item) => {
+                // 注意返回的不是字符串
+                return <li key={item}>{item}</li>
+              })}
+            </ul>
+            <button onClick={this.addNew.bind(this)}>改变产品</button>
+          </div>
+        )
+      };
+      addNew() {
+        this.setState({
+          products: ["汽车", '彩电', "洗衣机"]
+        });
+
+      }
+    }
+    ReactDOM.render(<App />, document.getElementById('app'));
+  </script>
+</body>
+
+</html>

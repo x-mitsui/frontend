@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./react-libs/react.development.js" crossorigin></script>
+  <script src="./react-libs/react-dom.development.js" crossorigin></script>
+  <script src="./react-libs/babel.min.js"></script>
+  <style type="text/css">
+    table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+
+      margin: 0 auto;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      /* padding撑开表格，在表格里表现更优秀 */
+      padding: 10px 16px;
+    }
+
+    table th {
+      text-align: center;
+    }
+
+    table td:nth-child(5) div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    table th:nth-child(1) {
+      width: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    // 每次更改state都会重新执行render
+    class App extends React.Component {
+      state = {
+        headers: [
+          "", '书籍', "出版日期", "价格", "购买数量", "操作"
+        ],
+        details: [
+          { id: 1, name: '算法导论', publishTime: "2006-9", price: "85", count: 1 },
+          { id: 2, name: 'UNIX编程艺术', publishTime: "2006-2", price: "59", count: 1 },
+          { id: 3, name: '编程珠玑', publishTime: "2008-10", price: "39", count: 1 },
+          { id: 4, name: '代码大全', publishTime: "2006-3", price: "128", count: 1 }
+        ]
+      }
+      constructor() {
+        super()
+      }
+      render() {
+        return (
+          <div >
+            {this.getDiv()}
+
+          </div >
+        )
+      }
+      getTableBox() {
+        return (
+          <div style={{ display: this.state.details.length > 0 ? "block" : "none" }}>
+            <table>
+              <thead>
+                <tr>
+                  {this.getHeaders()}
+                </tr>
+              </thead>
+              <tbody>
+                {this.getBody()}
+              </tbody>
+            </table>
+            <h2>总价格：￥{this.getTotal()}</h2>
+          </div>
+        )
+      }
+      getDiv() {
+        return this.state.details.length > 0 ? this.getTableBox() : (<h2>你没有购买商品</h2>)
+      }
+      getHeaders() {
+        return (this.state.headers.map((item, index) => <th key={index}>{item}</th>))
+      }
+      getBody() {
+        return this.state.details.map((item, index) => (
+          <tr key={item.id}>
+            <td>{item.id}</td>
+            <td>《{item.name}》</td>
+            <td>{item.publishTime}</td>
+            <td>￥{parseFloat(item.price).toFixed(2)}</td>
+            <td>
+              {/* 样式上添加div便于flex，不然会影响td布局*/}
+              <div>
+                <button
+                  disabled={item.count <= 1}
+                  onClick={(e) => { this.sub(index) }}>-
+                </button>
+                {item.count}
+                <button
+                  onClick={(e) => { this.add(item.id) }}>+
+                </button>
+              </div>
+
+            </td>
+            <td><button onClick={this.removeItem.bind(this, item.id)}>移除</button></td>
+          </tr>
+        ))
+      }
+      sub(index) {
+        // React中设计原则：state中的数据不可变性。
+        const details = [...this.state.details];
+        details[index].count--;
+        this.setState({
+          details
+        })
+      }
+      add(id) {
+        // this.state.details没变，满足React state不变性的设计原则
+        this.setState({
+          details: this.state.details.map(item => {
+            if (item.id === id) {
+              item.count++;
+            }
+            return item
+          })
+        })
+      }
+      removeItem(id) {
+        this.setState({
+          details: this.state.details.filter(item => {
+            return item.id !== id
+          })
+        })
+      }
+      getTotal() {
+        let total = this.state.details.reduce((pre, cur) => {
+          return pre + parseFloat(cur.price) * cur.count
+        }, 0)
+
+        return total.toFixed(2)
+      }
+    }
+
+
+    ReactDOM.render(<App />, document.querySelector('#app'))
+  </script>
+</body>
+
+</html>
